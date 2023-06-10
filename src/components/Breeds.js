@@ -541,15 +541,15 @@ function breeds() {
       <form>
         <div>
           <p>Choose your breeds:</p>
-
           <select>
             <option value="Choose">Choose your breed</option>
             {dogBreeds.map((db, i) => {
               return <option value="db">{db}</option>;
             })}
           </select>
+		  <input type="number" placeholder="Percentage of breed"/>
         </div>
-        <button>Create Storage</button>
+        <button>Select</button>
       </form>
     </div>
   );

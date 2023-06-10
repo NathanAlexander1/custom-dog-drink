@@ -5,10 +5,29 @@ import { useEffect, useInsertionEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
-  
+  const [inputList, setInputList] = useState([<Breeds />]);
+
+  const handleAddAdditionalBreed = () => {
+    setInputList(inputList.concat(<Breeds/>))
+  };
+
+  const handleRemoveBreed = () => {
+    setInputList(inputList.splice(-1))
+  };
+
   return (
-    <div className="App">
-      <Breeds/>
+    <div>
+      {inputList.map((IL, i) => {
+        return <div>{IL}</div>;
+      })}
+
+      <button type="button" onClick={() => handleAddAdditionalBreed()}>
+        Add another breed?
+      </button>
+
+      <button type="button" onClick={() => handleRemoveBreed()}>
+        Remove last breed?
+      </button>
 
       {/* <Router>
         <Routes>

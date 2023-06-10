@@ -12,7 +12,7 @@ function App() {
   };
 
   const handleRemoveBreed = () => {
-    setInputList(inputList.splice(-1))
+    setInputList(inputList.slice(0,-1))
   };
 
   return (

@@ -1,6 +1,17 @@
 import React from "react";
+import { useEffect, useInsertionEffect, useState } from "react";
 
-function breeds() {
+function Breeds() {
+//   const [breed, setBreed] = useState("Select Breed");
+//   const [currentDog, setCurrentDog] = useState([
+// 	{
+// 		breedName: "adfasdfasdf",
+// 		percentage: "90"
+// 	}
+//   ]);
+// const [starterDogArray, setStarterDogArray] = useState([])
+const [currentDogBreed, setCurrentDogBreed] = useState("eraerfaer")
+const [currentDogBreedPercentage, setCurrentDogBreedPercentage] = useState("88")
   const dogBreeds = [
     "Affenpinscher",
     "Afghan Hound",
@@ -536,23 +547,49 @@ function breeds() {
     "Yorkshire Terrier",
     "Zerdava",
   ];
+
+  const starterDog = []
+
+  const handleAddBreedPartForm = (e) => {
+	e.preventDefault();
+	console.log(starterDog)
+	const additionalDogBreed = {
+		breedName: currentDogBreed,
+		percentage: currentDogBreedPercentage
+	}
+	starterDog.push(additionalDogBreed)
+	console.log(starterDog)
+  }
+
   return (
     <div>
-      <form>
+      <form onSubmit={handleAddBreedPartForm}>
         <div>
           <p>Choose your breeds:</p>
-          <select>
-            <option value="Choose">Choose your breed</option>
-            {dogBreeds.map((db, i) => {
-              return <option value="db">{db}</option>;
+          <select
+		  	placeholder="Select your breed"
+            value={currentDogBreed}
+            onChange={(e) => setCurrentDogBreed(e.target.value)}
+          >
+            {dogBreeds.map((DB, i) => {
+              return (
+                <option key={"breed " + i}>
+                  {DB}
+                </option>
+              );
             })}
           </select>
-		  <input type="number" placeholder="Percentage of breed"/>
+          <input
+            type="number"
+            placeholder="Percentage of breed"
+            value={currentDogBreedPercentage}
+            onChange={(e) => setCurrentDogBreedPercentage(e.target.value)}
+          />
         </div>
-        <button>Select</button>
+      <button>Add</button>
       </form>
     </div>
   );
 }
 
-export default breeds;
+export default Breeds;

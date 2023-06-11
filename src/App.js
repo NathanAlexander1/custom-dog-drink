@@ -5,7 +5,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   const [breedList, setInputList] = useState([<Breeds />]);
-
   // const handleAddAdditionalBreed = () => {
   //   setInputList(breedList.concat(<Breeds/>));
   // };
@@ -29,10 +28,6 @@ function App() {
       <button type="button" onClick={() => handleRemoveBreed()}>
         Remove last breed?
       </button> */}
-
-        <h2>Your Current Dog:</h2>
-
-
 
         
         {/* {currentDog.map((CD, i) => {

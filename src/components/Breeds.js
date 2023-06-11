@@ -2,16 +2,10 @@ import React from "react";
 import { useEffect, useInsertionEffect, useState } from "react";
 
 function Breeds() {
-//   const [breed, setBreed] = useState("Select Breed");
-//   const [currentDog, setCurrentDog] = useState([
-// 	{
-// 		breedName: "adfasdfasdf",
-// 		percentage: "90"
-// 	}
-//   ]);
 const [starterDogArray, setStarterDogArray] = useState([])
 const [currentDogBreed, setCurrentDogBreed] = useState("eraerfaer")
 const [currentDogBreedPercentage, setCurrentDogBreedPercentage] = useState("88")
+const [loading, setLoading] = useState(true);
   const dogBreeds = [
     "Affenpinscher",
     "Afghan Hound",
@@ -548,11 +542,12 @@ const [currentDogBreedPercentage, setCurrentDogBreedPercentage] = useState("88")
     "Zerdava",
   ];
 
-//   let starterDog = []
+//   useEffect(() => {
+//     }, []);
 
   const handleAddBreedPartForm = (e) => {
 	e.preventDefault();
-	console.log(starterDogArray)
+	// console.log(starterDogArray)
 	const additionalDogBreed = {
 		breedName: currentDogBreed,
 		percentage: currentDogBreedPercentage
@@ -589,6 +584,18 @@ const [currentDogBreedPercentage, setCurrentDogBreedPercentage] = useState("88")
         </div>
       <button>Add</button>
       </form>
+	  <div>
+	  <h2>Your Current Dog:</h2>
+        {starterDogArray.map((STA, i) => {
+          return (
+            <div>
+            <p>
+              {STA.breedName} - {STA.percentage}
+            </p>
+          </div>
+          )}
+        )}
+	</div>
     </div>
   );
 }

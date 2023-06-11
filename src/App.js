@@ -1,4 +1,3 @@
-import Main from "./components/Main";
 import Breeds from "./components/Breeds";
 import { useEffect, useInsertionEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";

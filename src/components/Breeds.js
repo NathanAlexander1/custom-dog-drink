@@ -1,10 +1,12 @@
 import React from "react";
 import { useEffect, useInsertionEffect, useState } from "react";
+import "../styles/main.css";
 
 function Breeds() {
-const [starterDogArray, setStarterDogArray] = useState([])
-const [currentDogBreed, setCurrentDogBreed] = useState("eraerfaer")
-const [currentDogBreedPercentage, setCurrentDogBreedPercentage] = useState("88")
+  const [starterDogArray, setStarterDogArray] = useState([]);
+  const [currentDogBreed, setCurrentDogBreed] = useState("Affenpinscher");
+  const [currentDogBreedPercentage, setCurrentDogBreedPercentage] =
+    useState("");
   const dogBreeds = [
     "Affenpinscher",
     "Afghan Hound",
@@ -542,33 +544,34 @@ const [currentDogBreedPercentage, setCurrentDogBreedPercentage] = useState("88")
   ];
 
   const handleAddBreedPartForm = (e) => {
-	e.preventDefault();
-	// console.log(starterDogArray)
-	const additionalDogBreed = {
-		breedName: currentDogBreed,
-		percentage: currentDogBreedPercentage
-	}
-	starterDogArray.push(additionalDogBreed)
-	setStarterDogArray([...starterDogArray])
-	console.log(starterDogArray)
+    e.preventDefault();
+    // console.log(starterDogArray)
+    const additionalDogBreed = {
+      breedName: currentDogBreed,
+      percentage: currentDogBreedPercentage,
+    };
+    starterDogArray.push(additionalDogBreed);
+    setStarterDogArray([...starterDogArray]);
+    console.log(starterDogArray);
+  };
+
+  const clearList = () => {
+	//   console.log("test")
+	  setStarterDogArray([])
   }
 
   return (
-    <div>
+    <div className="form-container">
       <form onSubmit={handleAddBreedPartForm}>
         <div>
           <p>Choose your breeds:</p>
           <select
-		  	placeholder="Select your breed"
+            placeholder="Select your breed"
             value={currentDogBreed}
             onChange={(e) => setCurrentDogBreed(e.target.value)}
           >
             {dogBreeds.map((DB, i) => {
-              return (
-                <option key={"breed " + i}>
-                  {DB}
-                </option>
-              );
+              return <option key={"breed " + i}>{DB}</option>;
             })}
           </select>
           <input
@@ -578,20 +581,21 @@ const [currentDogBreedPercentage, setCurrentDogBreedPercentage] = useState("88")
             onChange={(e) => setCurrentDogBreedPercentage(e.target.value)}
           />
         </div>
-      <button>Add</button>
+        <button>Add</button>
       </form>
-	  <div>
-	  <h2>Your Current Dog:</h2>
+      <div>
+        <h2>Your Current Dog:</h2>
         {starterDogArray.map((STA, i) => {
           return (
             <div>
-            <p>
-              {STA.breedName} - {STA.percentage}
-            </p>
-          </div>
-          )}
-        )}
-	</div>
+              <p>
+                {STA.breedName} - {STA.percentage}
+              </p>
+            </div>
+          );
+        })}
+      </div>
+      <button onClick={()=>clearList()} >Clear List</button>
     </div>
   );
 }

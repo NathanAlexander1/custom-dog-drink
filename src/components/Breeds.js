@@ -5,7 +5,6 @@ function Breeds() {
 const [starterDogArray, setStarterDogArray] = useState([])
 const [currentDogBreed, setCurrentDogBreed] = useState("eraerfaer")
 const [currentDogBreedPercentage, setCurrentDogBreedPercentage] = useState("88")
-// const [loading, setLoading] = useState(true);
   const dogBreeds = [
     "Affenpinscher",
     "Afghan Hound",
@@ -541,9 +540,6 @@ const [currentDogBreedPercentage, setCurrentDogBreedPercentage] = useState("88")
     "Yorkshire Terrier",
     "Zerdava",
   ];
-
-//   useEffect(() => {
-//     }, []);
 
   const handleAddBreedPartForm = (e) => {
 	e.preventDefault();

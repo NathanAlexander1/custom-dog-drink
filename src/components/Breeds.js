@@ -5,7 +5,7 @@ function Breeds() {
 const [starterDogArray, setStarterDogArray] = useState([])
 const [currentDogBreed, setCurrentDogBreed] = useState("eraerfaer")
 const [currentDogBreedPercentage, setCurrentDogBreedPercentage] = useState("88")
-const [loading, setLoading] = useState(true);
+// const [loading, setLoading] = useState(true);
   const dogBreeds = [
     "Affenpinscher",
     "Afghan Hound",
@@ -553,7 +553,7 @@ const [loading, setLoading] = useState(true);
 		percentage: currentDogBreedPercentage
 	}
 	starterDogArray.push(additionalDogBreed)
-	setStarterDogArray(starterDogArray)
+	setStarterDogArray([...starterDogArray])
 	console.log(starterDogArray)
   }
 

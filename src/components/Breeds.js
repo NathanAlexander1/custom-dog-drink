@@ -9,7 +9,7 @@ function Breeds() {
 // 		percentage: "90"
 // 	}
 //   ]);
-// const [starterDogArray, setStarterDogArray] = useState([])
+const [starterDogArray, setStarterDogArray] = useState([])
 const [currentDogBreed, setCurrentDogBreed] = useState("eraerfaer")
 const [currentDogBreedPercentage, setCurrentDogBreedPercentage] = useState("88")
   const dogBreeds = [
@@ -548,17 +548,18 @@ const [currentDogBreedPercentage, setCurrentDogBreedPercentage] = useState("88")
     "Zerdava",
   ];
 
-  const starterDog = []
+//   let starterDog = []
 
   const handleAddBreedPartForm = (e) => {
 	e.preventDefault();
-	console.log(starterDog)
+	console.log(starterDogArray)
 	const additionalDogBreed = {
 		breedName: currentDogBreed,
 		percentage: currentDogBreedPercentage
 	}
-	starterDog.push(additionalDogBreed)
-	console.log(starterDog)
+	starterDogArray.push(additionalDogBreed)
+	setStarterDogArray(starterDogArray)
+	console.log(starterDogArray)
   }
 
   return (

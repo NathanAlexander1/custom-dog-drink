@@ -49,32 +49,7 @@ function Cocktail(props) {
     //For each value, take a value from cocktail array and move to newly created array
         //Can code so there are never repeats
     // //Rendder Array of custom cocktailt to the screen */}
-
-      {/* {breedMakeupArray.map((BMA, i) => {
-    console.log(BMA)
-    return
-    (<div></div>)
-})}
-
-    {dogBreeds.map((DB, i) => {
-        DB = testDataArray[Math.floor(Math.random()*testDataArray.length)]
-        return (
-            // <div><h1 key={"a" + i}>{DB}</h1></div>
-        )
-    })} */}
-
-      {/* {testDataArray.map((TDA, i) => {
-
-            dogBreeds.map((DB) => {
-                console.log(`i - DB`)
-                return (
-                    <div><h1>{DB}</h1></div>
-                )
-            })
-            return (
-                <div><h1>{TDA}</h1></div>
-            )
-    })} */}
+    <h1>Your Custom Drink:</h1>
       {breedsToDrinkIngredientsArray.map((AITFNAR) => {
         return (
           <ul>

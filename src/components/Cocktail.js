@@ -1,7 +1,7 @@
 import React from 'react'
 
 function Cocktail(props) {
-    // console.log(props)
+    console.log(props)
 
     let testDataArray = ["Vodka", "Orange Juice", "Vermouth", "Tomato juice", "Bananas", "Crappy Beer", "Lil gitta ganja"]
   return (

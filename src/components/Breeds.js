@@ -596,7 +596,7 @@ function Breeds(props) {
           );
         })}
       </div>
-	  < Cocktail breedMakeupArray={starterDogArray}/>
+	  < Cocktail breedMakeupArray={starterDogArray} dogBreeds = {dogBreeds}/>
       <button onClick={()=>clearList()} >Clear List</button>
     </div>
   );

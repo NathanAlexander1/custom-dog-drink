@@ -1,8 +1,9 @@
 import React from "react";
 import { useEffect, useInsertionEffect, useState } from "react";
+import Cocktail from "./Cocktail"
 import "../styles/main.css";
 
-function Breeds() {
+function Breeds(props) {
   const [starterDogArray, setStarterDogArray] = useState([]);
   const [currentDogBreed, setCurrentDogBreed] = useState("Affenpinscher");
   const [currentDogBreedPercentage, setCurrentDogBreedPercentage] =
@@ -595,7 +596,7 @@ function Breeds() {
           );
         })}
       </div>
-	  <button >Create Your Custom Cocktail!</button>
+	  < Cocktail breedMakeupArray={starterDogArray}/>
       <button onClick={()=>clearList()} >Clear List</button>
     </div>
   );

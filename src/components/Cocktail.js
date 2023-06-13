@@ -5,7 +5,7 @@ function Cocktail(props) {
   let dogBreeds = props.dogBreeds;
   let breedMakeupArray = props.breedMakeupArray;
   // let breedPercentage =
-//   console.log(props.breedMakeupArray);
+  //   console.log(props.breedMakeupArray);
   const [breedsToDrinkIngredientsArray, setBreedsToDrinkIngredientsArray] =
     useState([]);
   let testDataArray = [
@@ -51,7 +51,7 @@ function Cocktail(props) {
     "Honey",
     "Ginger Beer",
     "Lemon-Lime Soda",
-    "Coca-Cola"
+    "Coca-Cola",
   ];
 
   const convertBreedToIngredient = dogBreeds.map((DB) => {
@@ -61,42 +61,38 @@ function Cocktail(props) {
 
   // console.log(convertBreedToIngredient)
   const calculateCocktail = () => {
-    setBreedsToDrinkIngredientsArray (breedMakeupArray.map((BMA) => {
-      BMA.breedName =
-        convertBreedToIngredient[
-          Math.floor(Math.random() * convertBreedToIngredient.length)
-        ];
-      return `${BMA.breedName} - ${BMA.percentage}%`;
-    }));
-
+    setBreedsToDrinkIngredientsArray(
+      breedMakeupArray.map((BMA) => {
+        BMA.breedName =
+          convertBreedToIngredient[
+            Math.floor(Math.random() * convertBreedToIngredient.length)
+          ];
+        return `${BMA.breedName} - ${BMA.percentage}%`;
+      })
+    );
     // console.log(breedsToDrinkIngredientsArray);
   };
+
+  const clearCurrentCocktail = () => {
+    console.log(breedsToDrinkIngredientsArray)
+    setBreedsToDrinkIngredientsArray([])
+  }
   return (
     <div>
-      {/* //take the array of all breeds
-    //Create new array (useState)
-    //Iterate over dog breed array while simultaneously randomly iterating over testDataArray
-    //For each value of dog breed array, move a random cocktail array into the new array
-    //End double for loop
-
-    //Then, take the breedMakeupArray
-    //Create new array
-    //Iterate over breedMakeupArray and move 
-    //For each value, take a value from cocktail array and move to newly created array
-        //Can code so there are never repeats
-    // //Rendder Array of custom cocktailt to the screen */}
-    <div className="custom-drink-container">
-    <h1>Your Custom Drink:</h1>
-      {breedsToDrinkIngredientsArray.map((AITFNAR) => {
-        return (
-          <ul>
-            <li>{AITFNAR}</li>
-          </ul>
-        );
-      })}
-      <button onClick={() => calculateCocktail()}>
-        Create Your Custom Cocktail!
-      </button>
+      <div className="custom-drink-container">
+        <button onClick={() => calculateCocktail()}>
+          Create Your Custom Cocktail!
+        </button>
+        <h1>Your Custom Drink:</h1>
+        {breedsToDrinkIngredientsArray.map((AITFNAR) => {
+          return (
+            <ul>
+              <li>{AITFNAR}</li>
+            </ul>
+          );
+        })}
+        {(breedsToDrinkIngredientsArray.length > 0) ? <button onClick={() => clearCurrentCocktail()}>Clear Cocktail</button> : <button style={{display:"none"}}></button>}
+        {/* <button style={{display:"none"}} onClick={() => clearCurrentCocktail()}>Clear Cocktail</button> */}
       </div>
     </div>
   );

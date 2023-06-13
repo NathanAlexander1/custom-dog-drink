@@ -5,17 +5,53 @@ function Cocktail(props) {
   let dogBreeds = props.dogBreeds;
   let breedMakeupArray = props.breedMakeupArray;
   // let breedPercentage =
-  console.log(props.breedMakeupArray);
+//   console.log(props.breedMakeupArray);
   const [breedsToDrinkIngredientsArray, setBreedsToDrinkIngredientsArray] =
     useState([]);
   let testDataArray = [
     "Vodka",
+    "Gin",
+    "Rum",
+    "Cognac",
+    "Bourbon",
+    "Whiskey",
+    "Tequila",
+    "Scotch",
+    "Pisco",
+    "Sparkling Wine/Champagne",
+    "White Wine",
     "Orange Juice",
-    "Vermouth",
+    "Dry Vermouth",
+    "Rosso/rouge (sweet) Vermouth",
     "Tomato juice",
     "Bananas",
     "Crappy Beer",
     "Lil bitta ganja",
+    "Lemon Juice",
+    "Aromatic Bitters",
+    "Orange Bitters",
+    "Creole Bitters",
+    "Triple Sec Liqueur",
+    "Apricot Liqueur",
+    "Coffee Liqueur",
+    "Amaretto Liqueur",
+    "Pineapple Juice",
+    "Egg White",
+    "Soda Water (Club Soda)",
+    "Grapefruit Juice",
+    "Apple Juice",
+    "Cranberry Juice",
+    "Elderflower Liqueur",
+    "Mint Leaves",
+    "Agave Syrup",
+    "Ginger Ale",
+    "Maple Syrup",
+    "Tonic Water",
+    "Espresso",
+    "Honey",
+    "Ginger Beer",
+    "Lemon-Lime Soda",
+    "Coca-Cola"
   ];
 
   const convertBreedToIngredient = dogBreeds.map((DB) => {
@@ -33,7 +69,7 @@ function Cocktail(props) {
       return `${BMA.breedName} - ${BMA.percentage}%`;
     }));
 
-    console.log(breedsToDrinkIngredientsArray);
+    // console.log(breedsToDrinkIngredientsArray);
   };
   return (
     <div>

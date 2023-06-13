@@ -5,7 +5,7 @@ import "../styles/main.css";
 
 function Breeds(props) {
   const [starterDogArray, setStarterDogArray] = useState([]);
-  const [currentDogBreed, setCurrentDogBreed] = useState("Affenpinscher");
+  const [currentDogBreed, setCurrentDogBreed] = useState("");
   const [currentDogBreedPercentage, setCurrentDogBreedPercentage] =
     useState("");
   const dogBreeds = [
@@ -542,7 +542,9 @@ function Breeds(props) {
     "Yakutian Laika",
     "Yorkshire Terrier",
     "Zerdava",
+	"Other"
   ];
+  const [totalPercentage, setTotalPercentage] = useState("0");
 
   const handleAddBreedPartForm = (e) => {
     e.preventDefault();
@@ -553,7 +555,10 @@ function Breeds(props) {
     };
     starterDogArray.push(additionalDogBreed);
     setStarterDogArray([...starterDogArray]);
-    console.log(starterDogArray);
+	setTotalPercentage(totalPercentage + additionalDogBreed.percentage)
+	setCurrentDogBreed("Affenpinscher");
+	setCurrentDogBreedPercentage("100")
+    // console.log(starterDogArray);
   };
 
   const clearList = () => {
@@ -595,6 +600,7 @@ function Breeds(props) {
             </div>
           );
         })}
+		{/* <p>Total Dog Breed Makeup: {totalPercentage}%</p> */}
       <button onClick={()=>clearList()} >Clear List</button>
       </div>
 	  < Cocktail breedMakeupArray={starterDogArray} dogBreeds = {dogBreeds}/>

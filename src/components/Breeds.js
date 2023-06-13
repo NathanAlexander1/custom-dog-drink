@@ -544,7 +544,7 @@ function Breeds(props) {
     "Zerdava",
 	"Other"
   ];
-  const [totalPercentage, setTotalPercentage] = useState("0");
+  const [totalPercentage, setTotalPercentage] = useState(0);
 
   const handleAddBreedPartForm = (e) => {
     e.preventDefault();
@@ -555,9 +555,9 @@ function Breeds(props) {
     };
     starterDogArray.push(additionalDogBreed);
     setStarterDogArray([...starterDogArray]);
-	setTotalPercentage(totalPercentage + additionalDogBreed.percentage)
+	setTotalPercentage(Number(totalPercentage) + Number(additionalDogBreed.percentage))
 	setCurrentDogBreed("Affenpinscher");
-	setCurrentDogBreedPercentage("100")
+	setCurrentDogBreedPercentage("0")
     // console.log(starterDogArray);
   };
 
@@ -600,7 +600,7 @@ function Breeds(props) {
             </div>
           );
         })}
-		{/* <p>Total Dog Breed Makeup: {totalPercentage}%</p> */}
+		<p><strong>Total Dog Breed Makeup: {totalPercentage}%</strong></p>
       <button onClick={()=>clearList()} >Clear List</button>
       </div>
 	  < Cocktail breedMakeupArray={starterDogArray} dogBreeds = {dogBreeds}/>

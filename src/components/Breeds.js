@@ -559,13 +559,21 @@ function Breeds(props) {
       Number(totalPercentage) + Number(additionalDogBreed.percentage)
     );
     setCurrentDogBreed("Affenpinscher");
-    setCurrentDogBreedPercentage("0");
+    setCurrentDogBreedPercentage(0);
     // console.log(starterDogArray);
   };
-
+  const clearItem = (STA) => {
+	// console.log("test" + starterDogArray.indexOf(STA))
+	starterDogArray.splice(starterDogArray.indexOf(STA), 1);
+	setStarterDogArray([...starterDogArray])
+	setTotalPercentage(
+		Number(totalPercentage) - Number(STA.percentage)
+	  );
+  }
   const clearList = () => {
     //   console.log("test")
     setStarterDogArray([]);
+	setTotalPercentage(0)
   };
 
   return (
@@ -600,8 +608,9 @@ function Breeds(props) {
             return (
               <div>
                 <p>
-                  {STA.breedName} - {STA.percentage}
+                  {STA.breedName} - {STA.percentage}%
                 </p>
+				<button className="delete-item-btn" onClick={() => clearItem(STA)}>&times;</button>
               </div>
             );
           })}

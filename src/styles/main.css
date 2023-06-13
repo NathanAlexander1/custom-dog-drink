@@ -1,4 +1,4 @@
-.form-container {
+.form-container, .current-dog-container, .custom-drink-container {
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -85,6 +85,7 @@ function Cocktail(props) {
     //For each value, take a value from cocktail array and move to newly created array
         //Can code so there are never repeats
     // //Rendder Array of custom cocktailt to the screen */}
+    <div className="custom-drink-container">
     <h1>Your Custom Drink:</h1>
       {breedsToDrinkIngredientsArray.map((AITFNAR) => {
         return (
@@ -96,6 +97,7 @@ function Cocktail(props) {
       <button onClick={() => calculateCocktail()}>
         Create Your Custom Cocktail!
       </button>
+      </div>
     </div>
   );
 }

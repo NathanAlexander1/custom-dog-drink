@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect, useInsertionEffect, useState } from "react";
 import Cocktail from "./Cocktail";
 import "../styles/main.css";
+import Button from 'react-bootstrap/Button';
 
 function Breeds(props) {
   const [starterDogArray, setStarterDogArray] = useState([]);
@@ -604,10 +605,14 @@ function Breeds(props) {
 		<div>
         <div className="current-dog-container">
           <h2>Your Current Dog:</h2>
-		  {(starterDogArray.length > 0) ? <button onClick={() => clearList()}>Clear List</button> : <button style={{display:"none"}}></button>}
+		  {(starterDogArray.length > 0) ? 
+		  <div className="mb-2">
+        <Button onClick={() => clearList()} variant="primary" size="lg">
+          Clear List
+        </Button>{' '} </div> : <button style={{display:"none"}}></button>}
           {starterDogArray.map((STA, i) => {
             return (
-              <div key={"a" + i}>
+              <div className="current-dog-makeup" key={"a" + i}>
                 <p key={"b" + i}>
                   {STA.breedName} - {STA.percentage}%
                 </p>

@@ -1,5 +1,6 @@
 import React from "react";
 import { useEffect, useInsertionEffect, useState } from "react";
+import Button from 'react-bootstrap/Button';
 
 function Cocktail(props) {
   let dogBreeds = props.dogBreeds;
@@ -80,9 +81,9 @@ function Cocktail(props) {
   return (
     <div>
       <div className="custom-drink-container">
-        <button onClick={() => calculateCocktail()}>
+        <Button onClick={() => calculateCocktail()} variant="primary" size="lg">
           Create Your Custom Cocktail!
-        </button>
+        </Button>
         <h1>Your Custom Drink:</h1>
         {breedsToDrinkIngredientsArray.map((AITFNAR, i) => {
           return (

@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
 }
-.current-dog-container div{
+.current-dog-makeup {
     display: flex;
     border: 2px solid black;
     padding: 0 2%;;

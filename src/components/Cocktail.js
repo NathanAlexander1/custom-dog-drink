@@ -74,7 +74,7 @@ function Cocktail(props) {
   };
 
   const clearCurrentCocktail = () => {
-    console.log(breedsToDrinkIngredientsArray)
+    // console.log(breedsToDrinkIngredientsArray)
     setBreedsToDrinkIngredientsArray([])
   }
   return (
@@ -84,15 +84,14 @@ function Cocktail(props) {
           Create Your Custom Cocktail!
         </button>
         <h1>Your Custom Drink:</h1>
-        {breedsToDrinkIngredientsArray.map((AITFNAR) => {
+        {breedsToDrinkIngredientsArray.map((AITFNAR, i) => {
           return (
-            <ul>
-              <li>{AITFNAR}</li>
+            <ul key={"list" + i}>
+              <li key={"listItem" + 1}>{AITFNAR}</li>
             </ul>
           );
         })}
         {(breedsToDrinkIngredientsArray.length > 0) ? <button onClick={() => clearCurrentCocktail()}>Clear Cocktail</button> : <button style={{display:"none"}}></button>}
-        {/* <button style={{display:"none"}} onClick={() => clearCurrentCocktail()}>Clear Cocktail</button> */}
       </div>
     </div>
   );

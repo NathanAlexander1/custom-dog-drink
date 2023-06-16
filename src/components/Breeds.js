@@ -598,31 +598,10 @@ function Breeds(props) {
             value={currentDogBreedPercentage}
             onChange={(e) => setCurrentDogBreedPercentage(e.target.value)}
           />
-		    <Button type="submit" variant="primary">
+		    <Button className="center-btn" type="submit" variant="primary">
                 Add
               </Button>{" "}
         </Form>
-        {/* <form onSubmit={handleAddBreedPartForm}>
-          <div>
-            <p>Choose your breeds:</p>
-            <select
-              placeholder="Select your breed"
-              value={currentDogBreed}
-              onChange={(e) => setCurrentDogBreed(e.target.value)}
-            >
-              {dogBreeds.map((DB, i) => {
-                return <option key={"breed " + i}>{DB}</option>;
-              })}
-            </select>
-            <input
-              type="number"
-              placeholder="Percentage of breed"
-              value={currentDogBreedPercentage}
-              onChange={(e) => setCurrentDogBreedPercentage(e.target.value)}
-            />
-          </div>
-          <button>Add</button>
-        </form> */}
       </div>
       <div>
         <div className="current-dog-container">

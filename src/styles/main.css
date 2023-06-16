@@ -1,7 +1,19 @@
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+
+}
+.broadest-container {
+    margin: 5%;
+}
 .form-container, .current-dog-container, .custom-drink-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.form-container Form {
+    display: flex;
 }
 .current-dog-makeup {
     display: flex;
@@ -13,4 +25,8 @@
     all: unset;
     cursor: pointer;
     margin-left: 25px
+}
+.center-btn {
+    display: flex;
+    margin: auto;
 }

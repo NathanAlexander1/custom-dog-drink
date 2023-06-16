@@ -1,6 +1,7 @@
 import React from "react";
 import { useEffect, useInsertionEffect, useState } from "react";
 import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 
 function Cocktail(props) {
   let dogBreeds = props.dogBreeds;
@@ -85,14 +86,22 @@ function Cocktail(props) {
           Create Your Custom Cocktail!
         </Button>
         <h1>Your Custom Drink:</h1>
+        {(breedsToDrinkIngredientsArray.length > 0) ? 
+        <Card style={{ width: '18rem' }}>
+            <Card.Body>
+            {/* <Card.Title>Your Custom Drink:</Card.Title> */}
         {breedsToDrinkIngredientsArray.map((AITFNAR, i) => {
           return (
+            <Card.Text>
             <ul key={"list" + i}>
               <li key={"listItem" + 1}>{AITFNAR}</li>
             </ul>
+            </Card.Text>
           );
         })}
-        {(breedsToDrinkIngredientsArray.length > 0) ? <button onClick={() => clearCurrentCocktail()}>Clear Cocktail</button> : <button style={{display:"none"}}></button>}
+        {(breedsToDrinkIngredientsArray.length > 0) ? <Button className="center-btn" onClick={() => clearCurrentCocktail()} variant="primary" size="lg">Clear Cocktail</Button > : <button style={{display:"none"}}></button>}
+            </Card.Body>
+        </Card> : <p>Your Drink Will Appear Here</p>}
       </div>
     </div>
   );

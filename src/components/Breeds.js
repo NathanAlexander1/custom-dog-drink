@@ -8,10 +8,12 @@ import Form from "react-bootstrap/Form";
 import ListGroup from "react-bootstrap/ListGroup";
 
 function Breeds(props) {
+  const [testState, setTestState] = useState();
   const [starterDogArray, setStarterDogArray] = useState([]);
   const [currentDogBreed, setCurrentDogBreed] = useState("");
   const [currentDogBreedPercentage, setCurrentDogBreedPercentage] =
     useState("");
+  const [currentDogBreedImage, setCurrentDogBreedImage] = useState("");
   const [totalPercentage, setTotalPercentage] = useState(0);
   //   const dogBreeds = [
   //     "Affenpinscher",
@@ -565,12 +567,24 @@ function Breeds(props) {
       image: "https://dogell.b-cdn.net/uploads/breed/thumb_africanis.jpg",
     },
   ];
+  //   useEffect(() => {
+  //     // console.log(props.userId.id);
+  //     API.getDogBreeds().then((data) => {
+  //     //   console.log(data.message);
+  //       setTestState(data.message);
+  // 	  console.log(testState);
+
+  //     });
+  //   }, []);
 
   const handleAddBreedPartForm = (e) => {
     e.preventDefault();
 
     dogBreeds.map((DB, i)=> {
-      (DB.name === currentDogBreed) ? dogImg = DB.image : console.log("NAhhhhhh")
+      if (DB.name === currentDogBreed) {
+        dogImg = DB.image;
+        setTestState(dogImg);
+      }
     })
     const additionalDogBreed = {
       breedName: currentDogBreed,

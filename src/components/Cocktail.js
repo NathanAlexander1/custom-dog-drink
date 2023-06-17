@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect, useInsertionEffect, useState } from "react";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import ListGroup from 'react-bootstrap/ListGroup';
 
 function Cocktail(props) {
   let dogBreeds = props.dogBreeds;
@@ -85,21 +86,22 @@ function Cocktail(props) {
         <Button onClick={() => calculateCocktail()} variant="primary" size="lg">
           Create Your Custom Cocktail!
         </Button>
-        <h1>Your Custom Drink:</h1>
+        <h2>Your Custom Drink:</h2>
         {(breedsToDrinkIngredientsArray.length > 0) ? 
         <Card style={{ width: '18rem' }}>
             <Card.Body>
             {/* <Card.Title>Your Custom Drink:</Card.Title> */}
         {breedsToDrinkIngredientsArray.map((AITFNAR, i) => {
           return (
-            <Card.Text>
-            <ul key={"list" + i}>
-              <li key={"listItem" + 1}>{AITFNAR}</li>
-            </ul>
-            </Card.Text>
+                <ListGroup className="current-cocktail-makeup" key={"list" + i} as="ul" >
+                    <ListGroup.Item as="li">
+                    <Card.Text key={"listItem" + 1}>{AITFNAR}
+                    </Card.Text>
+                    </ListGroup.Item>
+                </ListGroup>
           );
         })}
-        {(breedsToDrinkIngredientsArray.length > 0) ? <Button className="center-btn" onClick={() => clearCurrentCocktail()} variant="primary" size="lg">Clear Cocktail</Button > : <button style={{display:"none"}}></button>}
+        {(breedsToDrinkIngredientsArray.length > 0) ? <Button className="center-btn" onClick={() => clearCurrentCocktail()} variant="primary" size="md">Clear Cocktail</Button > : <button style={{display:"none"}}></button>}
             </Card.Body>
         </Card> : <p>Your Drink Will Appear Here</p>}
       </div>

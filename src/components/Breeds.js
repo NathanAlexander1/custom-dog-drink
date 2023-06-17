@@ -1,11 +1,11 @@
 import React from "react";
 import { useEffect, useInsertionEffect, useState } from "react";
+import API from "../utils/API";
 import Cocktail from "./Cocktail";
 import "../styles/main.css";
 import Button from "react-bootstrap/Button";
-import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
-import Row from "react-bootstrap/Row";
+import ListGroup from "react-bootstrap/ListGroup";
 
 function Breeds(props) {
   const [starterDogArray, setStarterDogArray] = useState([]);
@@ -552,10 +552,9 @@ function Breeds(props) {
 
   const handleAddBreedPartForm = (e) => {
     e.preventDefault();
-    console.log(starterDogArray)
     const additionalDogBreed = {
       breedName: currentDogBreed,
-      percentage: currentDogBreedPercentage,
+      percentage: currentDogBreedPercentage
     };
     starterDogArray.push(additionalDogBreed);
     setStarterDogArray([...starterDogArray]);
@@ -564,7 +563,7 @@ function Breeds(props) {
     );
     setCurrentDogBreed("Affenpinscher");
     setCurrentDogBreedPercentage("");
-    // console.log(starterDogArray);
+    console.log(starterDogArray);
   };
   const clearItem = (STA) => {
     // console.log("test" + starterDogArray.indexOf(STA))
@@ -589,7 +588,7 @@ function Breeds(props) {
             onChange={(e) => setCurrentDogBreed(e.target.value)}
             aria-label="Default select example"
           >
-            {dogBreeds.map((DB, i) => {
+            {dogBreeds.map((DB, i) => {				
               return <option key={"breed " + i}>{DB}</option>;
             })}
           </Form.Select>
@@ -598,9 +597,9 @@ function Breeds(props) {
             value={currentDogBreedPercentage}
             onChange={(e) => setCurrentDogBreedPercentage(e.target.value)}
           />
-		    <Button className="center-btn" type="submit" variant="primary">
-                Add
-              </Button>{" "}
+          <Button className="center-btn" type="submit" variant="primary">
+            Add
+          </Button>{" "}
         </Form>
       </div>
       <div>
@@ -608,7 +607,7 @@ function Breeds(props) {
           <h2>Your Current Dog:</h2>
           {starterDogArray.length > 0 ? (
             <div className="mb-2">
-              <Button onClick={() => clearList()} variant="primary" size="lg">
+              <Button onClick={() => clearList()} variant="primary" size="md">
                 Clear List
               </Button>{" "}
             </div>
@@ -617,17 +616,16 @@ function Breeds(props) {
           )}
           {starterDogArray.map((STA, i) => {
             return (
-              <div className="current-dog-makeup" key={"a" + i}>
-                <p key={"b" + i}>
-                  {STA.breedName} - {STA.percentage}%
-                </p>
-                <button
-                  className="delete-item-btn"
-                  onClick={() => clearItem(STA)}
-                >
-                  &times;
-                </button>
-              </div>
+                <ListGroup className="current-dog-makeup" key={"a" + i} as="ul" >
+                  <ListGroup.Item style={{ width: '18rem' }} key={"b" + i} as="li">
+				  <img  width="50px" src={STA.image}/>
+                    {STA.breedName} - {STA.percentage}%{" "}
+                    <button
+                      className="delete-item-btn"
+                      onClick={() => clearItem(STA)}
+					  >&times;</button>
+                  </ListGroup.Item>
+                </ListGroup>
             );
           })}
           <p>

@@ -2235,7 +2235,7 @@ let dogBreeds=props.dogBreeds
                   key={"b" + i}
                   as="li"
                 >
-                  <img width="50px" src={STA.image} />
+                  <img width="75px" src={STA.image} />
                   {STA.breedName} - {STA.percentage}%{" "}
                   <button
                     className="delete-item-btn"

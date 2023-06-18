@@ -53,7 +53,6 @@ let dogBreeds=props.dogBreeds
     setTotalPercentage(0);
   };
   const changeRandomDogImage = () => {
-
     setRandomDogImage(dogBreeds[
       Math.floor(Math.random() * dogBreeds.length)
     ])
@@ -62,12 +61,12 @@ let dogBreeds=props.dogBreeds
   return (
     <>
       <div className="form-container">
-      <div class="randomImgContainer">
-      <img width="200px" src= {randomDogImage.image}/>
+      <div className="randomImgContainer">
       <h4>{randomDogImage.name}</h4>
-      <Button onClick={() => changeRandomDogImage()} className="center-btn" type="submit" variant="primary">
-          See random dog image
-        </Button>{" "}
+      <button onClick={() => changeRandomDogImage()} className="center-btn" type="submit" >
+      <img width="200px" src= {randomDogImage.image}/>
+        </button>
+        <h5>Click image for random dog picture</h5>
       </div>
         <p>Choose your breeds:</p>
 

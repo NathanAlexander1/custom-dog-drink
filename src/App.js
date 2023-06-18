@@ -1267,455 +1267,455 @@ function App() {
     },
     {
         name: "Maremmano-Abruzzese Sheepdog",
-        image: ""
+        image: "https://www.hundeo.com/wp-content/uploads/2019/09/Maremmen-Abruzzen-Scha%CC%88ferhund-Profilbild-1.jpg"
     },
     {
         name: "McNab dog",
-        image: ""
+        image: "https://ckcusa.com/media/147701/mcnab.jpg?preset=ckcBreedImage375"
     },
     {
         name: "Miniature American Shepherd",
-        image: ""
+        image: "https://www.akc.org/wp-content/uploads/2017/11/Miniature-American-Shepherd-On-White-01.jpg"
     },
     {
         name: "Miniature Bull Terrier",
-        image: ""
+        image: "https://www.petfinder.com/sites/default/files/images/content/miniature-bull-terrier-detail-scaled.jpg"
     },
     {
         name: "Miniature Fox Terrier",
-        image: ""
+        image: "https://upload.wikimedia.org/wikipedia/commons/3/38/Miniature_Fox_Terrier.jpg"
     },
     {
         name: "Miniature Pinscher",
-        image: ""
+        image: "https://www.purina.co.uk/sites/default/files/2022-07/Miniature-Pinscher.jpg?itok=PKIDPe_X"
     },
     {
         name: "Miniature Schnauzer",
-        image: ""
+        image: "https://www.akc.org/wp-content/uploads/2017/11/Miniature-Schnauzer-On-White-01.jpg"
     },
     {
         name: "Molossus of Epirus",
-        image: ""
+        image: "https://101dogbreeds.com/wp-content/uploads/2018/03/Molossus-of-Epirus.jpg"
     },
     {
         name: "Mongrel",
-        image: ""
+        image: "https://media.istockphoto.com/id/1137944339/photo/mixed-breed-dog-8-years-old-sitting-in-front-of-white-background.jpg?s=612x612&w=0&k=20&c=XiayIrxQZbtVgkRh13oKfuvrwQOKMhpVZw_hlPMEMnM="
     },
     {
         name: "Montenegrin Mountain Hound",
-        image: ""
+        image: "https://www.petmapz.com/wp-content/uploads/2015/05/Montenegrin-Mountain-Hound.jpg"
     },
     {
         name: "Mountain Cur",
-        image: ""
+        image: "https://dogtime.com/wp-content/uploads/sites/12/gallery/mountain-cur-dog-breed-pictures/mountain-cur-dog-breed-pictures-1.jpg"
     },
     {
         name: "Mountain Feist",
-        image: ""
+        image: "https://i-10b32.kxcdn.com/ppbr/breeds/mountain-feist_profile_350x400.jpg"
     },
     {
         name: "Mucuchies",
-        image: ""
+        image: "https://www.easypetmd.com/sites/default/files/Mucuchies%20(1).jpg"
     },
     {
         name: "Mudhol Hound",
-        image: ""
+        image: "https://www.caravanhound.in/home/wp-content/uploads/2017/02/Mudhol.jpg"
     },
     {
         name: "Mudi",
-        image: ""
+        image: "https://www.hundeo.com/wp-content/uploads/2019/09/Mudi-Profilbild.jpg"
     },
     {
         name: "Neapolitan Mastiff",
-        image: ""
+        image: "https://ckcusa.com/media/147719/neapolitan-mastiff.jpg?preset=ckcBreedImage375"
     },
     {
         name: "Nenets Herding Laika",
-        image: ""
+        image: "https://64.media.tumblr.com/7f9354a3e3e2369460b099267801088d/494cc3f550f89efe-ab/s540x810/36c35f906783a968cff17da873f4109279ea3020.jpg"
     },
     {
         name: "New Guinea singing dog",
-        image: ""
+        image: "https://ckcusa.com/media/147721/new-guinea-singing-dog.jpg?preset=ckcBreedImage375"
     },
     {
         name: "New Zealand Heading Dog",
-        image: ""
+        image: "https://i.pinimg.com/originals/7f/f8/9d/7ff89d34af521182bfe6e82a543f1750.jpg"
     },
     {
         name: "Newfoundland",
-        image: ""
+        image: "https://img.freepik.com/premium-photo/newfoundland-dog_191971-3446.jpg"
     },
     {
         name: "Norfolk Terrier",
-        image: ""
+        image: "https://dogtime.com/wp-content/uploads/sites/12/2011/01/file_23076_norfolk-terrier.jpg"
     },
     {
         name: "Norrbottenspets",
-        image: ""
+        image: "https://www.akc.org/wp-content/uploads/2017/11/Norrbottenspets-On-White-01.jpg"
     },
     {
         name: "Northern Inuit Dog",
-        image: ""
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Northern_Inuit_Dog.jpg/800px-Northern_Inuit_Dog.jpg"
     },
     {
         name: "Norwegian Buhund",
-        image: ""
+        image: "https://www.akc.org/wp-content/uploads/2017/11/Norwegian-Buhund-On-White-01.jpg"
     },
     {
         name: "Norwegian Elkhound",
-        image: ""
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Norwegian_Elkhound_1.jpg/1200px-Norwegian_Elkhound_1.jpg"
     },
     {
         name: "Norwegian Lundehund",
-        image: ""
+        image: "https://ckcusa.com/media/147730/norwegian-lundehund.jpg?preset=ckcBreedImage375"
     },
     {
         name: "Norwich Terrier",
-        image: ""
+        image: "https://www.purina.co.uk/sites/default/files/styles/square_medium_440x440/public/2022-07/Norwich-Terrier.jpg?itok=OtBwaPrB"
     },
     {
         name: "Nova Scotia Duck Tolling Retriever",
-        image: ""
+        image: "https://dogtime.com/wp-content/uploads/sites/12/2011/01/file_22990_nova-scotia-duck-tolling-retriever.jpg"
     },
     {
         name: "Old Danish Pointer",
-        image: ""
+        image: "https://cdn.dogsplanet.com/wp-content/uploads/2019/10/chien-darr%C3%AAt-danois.jpg"
     },
     {
         name: "Old English Sheepdog",
-        image: ""
+        image: "https://ckcusa.com/media/147737/old-english-sheepdog.jpg?preset=ckcBreedImage375"
     },
     {
         name: "Old English Terrier",
-        image: ""
+        image: "https://media.istockphoto.com/id/1205016170/photo/english-bull-terrier-posing-on-dog-show.jpg?s=612x612&w=0&k=20&c=QOpYHY88STgrUD7YQNxPySZkIOai6uwi3fzwa2jmjKQ="
     },
     {
         name: "Olde English Bulldogge",
-        image: ""
+        image: "https://ckcusa.com/media/147738/olde-english-bulldogge.jpg?preset=ckcBreedImage375"
     },
     {
         name: "Otterhound",
-        image: ""
+        image: "https://www.purina.co.uk/sites/default/files/styles/square_medium_440x440/public/2022-07/Otterhound.jpg?itok=dG-MbA8y"
     },
     {
         name: "Pachon Navarro",
-        image: ""
+        image: "https://media-animals.earth.com/images/2022/08/17/3191272928202604/pachonnavarro_45241812575983675.jpg"
     },
     {
         name: "Pampas Deerhound",
-        image: ""
+        image: "https://www.akc.org/wp-content/uploads/2017/11/Scottish-Deerhound-standing-in-the-woods.jpg"
     },
     {
         name: "Papillon",
-        image: ""
+        image: "https://www.purina.co.uk/sites/default/files/2021-02/BREED%20Hero_0092_papillon.jpg"
     },
     {
         name: "Parson Russell Terrier",
-        image: ""
+        image: "https://upload.wikimedia.org/wikipedia/commons/a/aa/Parson_Russell_Terrier_FCI.jpg"
     },
     {
         name: "Pastore della Lessinia' e del Lagorai",
-        image: ""
+        image: "https://1.bp.blogspot.com/-BdNojc_GbmI/XvtguOFZrYI/AAAAAAABR5o/3yKK89Vs11s5c1Vl5cPiQ8XzAqPpSDsqgCLcBGAsYHQ/s1600/pastore%2Bdei%2Blagorai.jpg"
     },
     {
         name: "Patagonian Sheepdog",
-        image: ""
+        image: "https://i.ytimg.com/vi/qsDbSKlcDGI/mqdefault.jpg"
     },
     {
         name: "Patterdale Terrier",
-        image: ""
+        image: "https://dogtime.com/wp-content/uploads/sites/12/gallery/patterdale-terrier-dog-breed-pictures/patterdale-terrier-dog-breed-pictures-1.jpg"
     },
     {
         name: "Pekingese",
-        image: ""
+        image: "https://ckcusa.com/media/144636/pekingese-2.jpg?preset=ckcBreedImage375"
     },
     {
         name: "Pembroke Welsh Corgi",
-        image: ""
+        image: "https://www.akc.org/wp-content/uploads/2017/11/day_2_dec_14_085-400x267.jpg"
     },
     {
         name: "Perro Majorero",
-        image: ""
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjCNEa_Zs_I118CiVQyVjUDlninZ6FlBgLCUFa17_AJQ&usqp=CAU&ec=48665701"
     },
     {
         name: "Perro de Pastor Mallorquin",
-        image: ""
+        image: "https://cdn.wamiz.fr/cdn-cgi/image/format=auto,quality=80,width=400,height=200,fit=cover/animal/breed/dog/adult/5d4157987e239450734953.jpg"
     },
     {
         name: "Perro de Presa Canario",
-        image: ""
+        image: "https://ckcusa.com/media/147748/perro-de-presa-canario.jpg?preset=ckcBreedImage375"
     },
     {
         name: "Perro de Presa Mallorquin",
-        image: ""
+        image: "https://images.fineartamerica.com/images-medium-large-5/3-perro-de-presa-mallorquin-jean-michel-labat.jpg"
     },
     {
         name: "Peruvian Inca Orchid",
-        image: ""
+        image: "https://www.akc.org/wp-content/uploads/2017/11/Peruvian-Inca-Orchid-04.jpg"
     },
     {
         name: "Petit Basset Griffon Vendéen",
-        image: ""
+        image: "https://www.akc.org/wp-content/uploads/2017/11/Petit-Basset-Griffon-Vendeen-On-White-03.jpg"
     },
     {
         name: "Petit Bleu de Gascogne",
-        image: ""
+        image: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Petit_Bleu_De_Gascogne.jpg"
     },
     {
         name: "Phalène",
-        image: ""
+        image: "https://www.101dogbreeds.com/wp-content/uploads/2017/05/Phal%C3%A8ne-Pictures.jpg"
     },
     {
         name: "Pharaoh Hound",
-        image: ""
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvrHkYrMQC7FIGjh4LTnhOkcwkFhs3Z6RCiYTZKY_YcA&usqp=CAU&ec=48665701"
     },
     {
         name: "Phu Quoc Ridgeback",
-        image: ""
+        image: "https://thedogsjournal.com/wp-content/uploads/2022/04/Phu-Quoc-Ridgeback-Dog.jpg"
     },
     {
         name: "Picardy Spaniel",
-        image: ""
+        image: "https://animalsadda.com/wp-content/uploads/2020/04/Picardy-Spaniel-2.jpg"
     },
     {
         name: "Plummer Terrier",
-        image: ""
+        image: "https://www.101dogbreeds.com/wp-content/uploads/2017/12/Plummer-Terrier-Dog.jpg"
     },
     {
         name: "Plott Hound",
-        image: ""
+        image: "https://dogtime.com/wp-content/uploads/sites/12/2011/01/file_23040_plott.jpg"
     },
     {
         name: "Podenco Andaluz",
-        image: ""
+        image: "https://as1.ftcdn.net/v2/jpg/05/53/50/04/1000_F_553500418_IVkKno7WN0OEsWLtgXrF1FjVTbB9oRFz.jpg"
     },
     {
         name: "Podenco Canario",
-        image: ""
+        image: "https://www.hundeo.com/wp-content/uploads/2019/01/Podenco-Canario-Profil.jpg"
     },
     {
         name: "Podenco Valenciano",
-        image: ""
+        image: "https://media-animals.earth.com/images/2022/08/17/7623636096608437/podencovalenciano_5933298675098437.jpg"
     },
     {
         name: "Pointer",
-        image: ""
+        image: "https://upload.wikimedia.org/wikipedia/commons/8/85/English_Pointer_orange-white.jpg"
     },
     {
         name: "Poitevin",
-        image: ""
+        image: "https://cdn.wamiz.fr/cdn-cgi/image/format=auto,quality=80,width=1200,height=675,fit=cover/animal/breed/dog/adult/5cb5dc10c749e606770858.jpg"
     },
     {
         name: "Polish Greyhound",
-        image: ""
+        image: "https://cdn.dogsplanet.com/wp-content/uploads/2019/10/l%C3%A9vrier-polonais.jpg"
     },
     {
         name: "Polish Hound",
-        image: ""
+        image: "https://cdn.wamiz.fr/cdn-cgi/image/format=auto,quality=80,width=1200,height=675,fit=cover/animal/breed/dog/adult/5d4048b568246332040725.jpg"
     },
     {
         name: "Polish Lowland Sheepdog",
-        image: ""
+        image: "https://www.dogsnsw.org.au/media/img/BrowseAllBreed/Polish-Lowland-Sheepdog.jpg"
     },
     {
         name: "Polish Tatra Sheepdog",
-        image: ""
+        image: "https://upload.wikimedia.org/wikipedia/commons/f/fb/Podhalaner_Sven_Fischer.jpg"
     },
     {
         name: "Pomeranian",
-        image: ""
+        image: "https://ckcusa.com/media/144637/pomeranian.jpg?preset=ckcBreedImage375"
     },
     {
         name: "Pont-Audemer Spaniel",
-        image: ""
+        image: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Pont-Audemer_Spaniel_or_%C3%89pagneul_de_Pont-Audemer.JPG"
     },
     {
         name: "Poodle",
-        image: ""
+        image: "https://upload.wikimedia.org/wikipedia/commons/3/35/Agility_Poodle.jpg"
     },
     {
         name: "Porcelaine",
-        image: ""
+        image: "https://cdn.dogsplanet.com/wp-content/uploads/2019/10/porcelaine.jpg"
     },
     {
         name: "Portuguese Podengo",
-        image: ""
+        image: "https://www.akc.org/wp-content/uploads/2017/11/Portuguese-Podengo-standing-in-three-quarter-view.jpg"
     },
     {
         name: "Portuguese Pointer",
-        image: ""
+        image: "https://doglime.com/wp-content/uploads/2019/04/Portuguese-Pointer-300x187.jpg"
     },
     {
         name: "Portuguese Water Dog",
-        image: ""
+        image: "https://www.purina.co.uk/sites/default/files/styles/square_medium_440x440/public/2022-07/Portuguese-Water-Dog.jpg?itok=la9fHEVc"
     },
     {
         name: "Posavac Hound",
-        image: ""
+        image: "https://preview.redd.it/cfhzxssxin931.jpg?auto=webp&s=820f8589d8dc58d69a0ef9eb797f2a253e8bf0f4"
     },
     {
         name: "Pražský Krysařík",
-        image: ""
+        image: "https://eyams5v2mpc.exactdn.com/wp-content/uploads/2022/11/shutterstock_1645073449-scaled.jpg?strip=all&lossy=1&ssl=1"
     },
     {
         name: "Pudelpointer",
-        image: ""
+        image: "https://fello.pet/wp-content/uploads/2020/12/pudelpojnter2.jpg"
     },
     {
         name: "Pug",
-        image: ""
+        image: "https://cdn-fastly.petguide.com/media/2022/02/16/8243746/pug.jpg?size=720x845&nocrop=1"
     },
     {
         name: "Puli",
-        image: ""
+        image: "https://st.depositphotos.com/1806346/1390/i/450/depositphotos_13908594-stock-photo-corded-puli.jpg"
     },
     {
         name: "Pumi",
-        image: ""
+        image: "https://www.akc.org/wp-content/uploads/2017/11/Pumi-MP.jpg"
     },
     {
         name: "Pungsan dog",
-        image: ""
+        image: "https://i.pinimg.com/736x/b7/91/89/b791898a62c5a5a6dd18975b3cc76aa2--spitz-dogs-korean.jpg"
     },
     {
         name: "Pyrenean Mastiff",
-        image: ""
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/MasPiri-Puma-FIN.jpg/440px-MasPiri-Puma-FIN.jpg"
     },
     {
         name: "Pyrenean Mountain Dog",
-        image: ""
+        image: "https://media.istockphoto.com/id/182401853/photo/great-pyrenees.jpg?s=612x612&w=0&k=20&c=6iSSNikfn9lFRA-2FpVzoQ3GhJywp9qYQpeiI3yEyn8="
     },
     {
         name: "Pyrenean Sheepdog",
-        image: ""
+        image: "https://www.purina.co.uk/sites/default/files/2021-02/BREED%20Hero_0102_pyrenean_sheepdog.jpg"
     },
     {
         name: "Rafeiro do Alentejo",
-        image: ""
+        image: "https://www.hundeo.com/wp-content/uploads/2019/01/Rafeiro-Do-Alentejo-Profilbild.jpg"
     },
     {
         name: "Rajapalayam",
-        image: ""
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/%282%29_Isha_female_rajapalayam.jpg/1200px-%282%29_Isha_female_rajapalayam.jpg"
     },
     {
         name: "Rampur Greyhound",
-        image: ""
+        image: "https://www.101dogbreeds.com/wp-content/uploads/2016/07/Rampur-Greyhound-Dog.jpg"
     },
     {
         name: "Rat Terrier",
-        image: ""
+        image: "https://www.akc.org/wp-content/uploads/2017/11/Rat-Terrier-On-White-01.jpg"
     },
     {
         name: "Ratonero Bodeguero Andaluz",
-        image: ""
+        image: "https://www.iperu.org/wp-content/uploads/2015/12/perro-ratonero-bodeguero-andaluz.jpg"
     },
     {
         name: "Ratonero Mallorquin",
-        image: ""
+        image: "https://www.hundeo.com/wp-content/uploads/2020/03/Ratero-Mallorquin-Profilbild.jpg"
     },
     {
         name: "Ratonero Murciano",
-        image: ""
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Bodeguero_young.jpg/320px-Bodeguero_young.jpg"
     },
     {
         name: "Ratonero Valenciano",
-        image: ""
+        image: "https://i.pinimg.com/736x/3e/84/44/3e84446bc62386b58b3d66bf8f58219c--dog-breeds-puppies.jpg"
     },
     {
         name: "Redbone Coonhound",
-        image: ""
+        image: "https://upload.wikimedia.org/wikipedia/commons/e/e2/A_female_redbone-coonhound-1.jpg"
     },
     {
         name: "Rhodesian Ridgeback",
-        image: ""
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Male_Rhodesian_ridgeback_IMG_6800.JPG/1200px-Male_Rhodesian_ridgeback_IMG_6800.JPG"
     },
     {
         name: "Romanian Mioritic Shepherd Dog",
-        image: ""
+        image: "https://dogtime.com/wp-content/uploads/sites/12/gallery/romanian-mioritic-shepherd-dog-breed-pictures/romanian-mioritic-shepherd-dog-breed-pictures-1.jpg"
     },
     {
         name: "Romanian Raven Shepherd Dog",
-        image: ""
+        image: "https://nationalpurebreddogday.com/wp-content/uploads/2018/06/c604a85d6ff519e9523b9aa656d0592f-300x413.jpg"
     },
     {
         name: "Rottweiler",
-        image: ""
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRa70rLHZoTPosyO7I-YSz-SDAmXiMkuVmylhEh0h3_Xg&usqp=CAU&ec=48665701"
     },
     {
         name: "Rough Collie",
-        image: ""
+        image: "https://www.purina.co.uk/sites/default/files/2021-02/BREED%20Hero_0036_collie_rough.jpg"
     },
     {
         name: "Russian Spaniel",
-        image: ""
+        image: "https://europetnet.org/images/dogbreeds/russianspaniel.jpg"
     },
     {
         name: "Russian Toy",
-        image: ""
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiwzR7mmwPcpujqK2pDefuU7qY_GxNZFj6zV-wZlW6Kg&usqp=CAU&ec=48665701"
     },
     {
         name: "Russo-European Laika",
-        image: ""
+        image: "https://ckcusa.com/media/147800/russo-european-laika.jpg?preset=ckcBreedImage375"
     },
     {
         name: "Ryukyu Inu",
-        image: ""
+        image: "https://i0.wp.com/okinawanaturephotography.com/wp-content/uploads/2017/11/14994667613_6e502acd04_b.jpg"
     },
     {
         name: "Saarloos Wolfdog",
-        image: ""
+        image: "https://previews.123rf.com/images/cynoclub/cynoclub1612/cynoclub161200130/67526862-saarloos-wolfdog-in-front-of-white-background.jpg"
     },
     {
         name: "Sabueso Español",
-        image: ""
+        image: "https://fello.pet/wp-content/uploads/2020/12/ispanskaya-gonchaya.jpg"
     },
     {
         name: "Saint Bernard",
-        image: ""
+        image: "https://cdn.britannica.com/66/235666-050-751046D6/Saint-bernard-dog-st-bernard-standing-snow.jpg"
     },
     {
         name: "Saint Hubert Jura Hound",
-        image: ""
+        image: "https://nationalpurebreddogday.com/wp-content/uploads/2017/07/bruno-saint-hubert-francais-131015-131202.jpg"
     },
     {
         name: "Saint Miguel Cattle Dog",
-        image: ""
+        image: "https://cdn.wamiz.fr/cdn-cgi/image/format=auto,quality=80,width=1200,height=675,fit=cover/animal/breed/dog/adult/5cd198d065e9d844620048.jpg"
     },
     {
         name: "Saint-Usuge Spaniel",
-        image: ""
+        image: "https://upload.wikimedia.org/wikipedia/commons/2/27/EpagneuldeSaintUsuge.jpg"
     },
     {
         name: "Saluki",
-        image: ""
+        image: "https://upload.wikimedia.org/wikipedia/commons/d/d3/Saluki_Fond_Blanc.jpg"
     },
     {
         name: "Samoyed",
-        image: ""
+        image: "https://www.purina.co.uk/sites/default/files/2021-02/BREED%20Hero_0110_samoyed.jpg"
     },
     {
         name: "Sapsali",
-        image: ""
+        image: "https://i.pinimg.com/550x/26/d3/cb/26d3cb004aef7129272fe8d9fca99c9f.jpg"
     },
     {
         name: "Sarabi dog",
-        image: ""
+        image: "https://i.pinimg.com/originals/ea/89/eb/ea89eb4390af9632231993cf0f496352.jpg"
     },
     {
         name: "Sardinian Shepherd Dog",
-        image: ""
+        image: "https://farm4.staticflickr.com/3374/3409311428_439a857d7c_b.jpg"
     },
     {
         name: "Šarplaninac",
-        image: ""
+        image: "https://www.hundeo.com/wp-content/uploads/2019/09/S%CC%8Carplaninac-Profilbild.jpg"
     },
     {
         name: "Schapendoes",
-        image: ""
+        image: "https://www.hundeo.com/wp-content/uploads/2019/06/Schapendoes-Profil.jpg"
     },
     {
         name: "Schillerstövare",
-        image: ""
+        image: "https://ckcusa.com/media/147808/schillerstovare.jpg?preset=ckcBreedImage375"
     },
     {
         name: "Schipperke",
@@ -1723,271 +1723,271 @@ function App() {
     },
     {
         name: "Schweizer Laufhund",
-        image: ""
+        image: "https://www.purina.co.uk/sites/default/files/styles/square_medium_440x440/public/2022-08/Schipperke.jpg?itok=vflQ_Wzs"
     },
     {
         name: "Schweizerischer Niederlaufhund",
-        image: ""
+        image: "https://i.pinimg.com/736x/7b/0e/69/7b0e69be7569925ea5d82067ab045d98--dog-breeds-jura.jpg"
     },
     {
         name: "Scottish Deerhound",
-        image: ""
+        image: "https://www.purina.co.uk/sites/default/files/2022-07/Deerhound.jpg?itok=WtOg5UVS"
     },
     {
         name: "Scottish Terrier",
-        image: ""
+        image: "https://www.hundeo.com/wp-content/uploads/2019/08/Scottish-Terrier-Profil.jpg"
     },
     {
         name: "Sealyham Terrier",
-        image: ""
+        image: "https://www.thesprucepets.com/thmb/qN_4G-gzwKJGKduwxU_d_nDk5b4=/800x0/filters:no_upscale():strip_icc()/Sealyham_Terrier_-_Solo.2-c1d1c7ef266f40f0a4059057ef075a55.jpg"
     },
     {
         name: "Segugio dell'Appennino",
-        image: ""
+        image: "https://www.cani.it/img/08f31d947673fcd5ca42cb5c0625410e/246.jpg"
     },
     {
         name: "Segugio Italiano",
-        image: ""
+        image: "https://fello.pet/wp-content/uploads/2020/12/ital-gonchaya1.jpg"
     },
     {
         name: "Segugio Maremmano",
-        image: ""
+        image: "https://www.fci.be/Nomenclature/Illustrations/361g06-1.jpg"
     },
     {
         name: "Serbian Hound",
-        image: ""
+        image: "https://brit-petfood.com/file/nodes/product/srbskyhonic.jpg"
     },
     {
         name: "Serbian Tricolour Hound",
-        image: ""
+        image: "https://fello.pet/wp-content/uploads/2020/12/serbskaya-trehczvetnaya-gonchaya1.jpg"
     },
     {
         name: "Serrano Bulldog",
-        image: ""
+        image: "https://thebulldogaddict.com/wp-content/uploads/2020/11/Serrano-Bulldog-Picture.jpg"
     },
     {
         name: "Shar Pei",
-        image: ""
+        image: "https://media.istockphoto.com/id/520775729/photo/chinese-shar-pei.jpg?s=612x612&w=0&k=20&c=YjRePdq0WWYdSV8Zg3Y34CJ6g7dwueFAvxn3hQpSrec="
     },
     {
         name: "Shetland Sheepdog",
-        image: ""
+        image: "https://www.purina.co.uk/sites/default/files/styles/square_medium_440x440/public/2022-09/Shetland%20Sheepdog.jpg?h=bc7b09df&itok=tBaTIF1U"
     },
     {
         name: "Shiba Inu",
-        image: ""
+        image: "https://st.depositphotos.com/1722908/1817/i/950/depositphotos_18176563-stock-photo-shiba-inu-dog.jpg"
     },
     {
         name: "Shih Tzu",
-        image: ""
+        image: "https://www.omlet.us/images/cache/512/433/Dog-Shih_Tzu-A_beautiful_little_Shih_Tzu_standing_tall%2C_showing_off_its_big_bushy_tail.jpg"
     },
     {
         name: "Shikoku",
-        image: ""
+        image: "https://www.hundeo.com/wp-content/uploads/2019/10/Shikoku-Hunderasse-Profil.jpg"
     },
     {
         name: "Shiloh Shepherd",
-        image: ""
+        image: "https://breed-assets.wisdompanel.com/dog/shiloh-shepherd/shiloh-shepherd1.jpg"
     },
     {
         name: "Siberian Husky",
-        image: ""
+        image: "https://img.freepik.com/premium-photo/black-white-siberian-husky-dog-white_8595-11196.jpg?w=2000"
     },
     {
         name: "Silken Windhound",
-        image: ""
+        image: "https://upload.wikimedia.org/wikipedia/commons/d/dc/Fallon_the_Silken_Windhound.jpg"
     },
     {
         name: "Silky Terrier",
-        image: ""
+        image: "https://www.akc.org/wp-content/uploads/2017/11/Silky-Terrier-On-White-01.jpg"
     },
     {
         name: "Sinhala Hound",
-        image: ""
+        image: "https://cdn.shopify.com/s/files/1/0589/8262/9516/files/Sinhala_Hound_480x480.jpg?v=1680772576"
     },
     {
         name: "Skye Terrier",
-        image: ""
+        image: "https://www.hundeo.com/wp-content/uploads/2019/01/Skye-Terrier-Profil.jpg"
     },
     {
         name: "Sloughi",
-        image: ""
+        image: "https://www.akc.org/wp-content/uploads/2017/11/Sloughi-400x267.jpg"
     },
     {
         name: "Slovakian Wirehaired Pointer",
-        image: ""
+        image: "https://www.dogbreedinfo.com/images27/SlovakianRoughHairedPointerPurebredDogLuger2YearsOld1.jpg"
     },
     {
         name: "Slovenský Cuvac",
-        image: ""
+        image: "https://www.akc.org/wp-content/uploads/2017/11/Slovensky-Cuvac-standing-outdoors.jpg"
     },
     {
         name: "Slovenský Kopov",
-        image: ""
+        image: "https://doglime.com/wp-content/uploads/2019/05/Slovensky-Kopov-Behavior.jpg"
     },
     {
         name: "Smalandstövare",
-        image: ""
+        image: "https://www.fci.be/Nomenclature/Illustrations/129g06.jpg"
     },
     {
         name: "Small Greek domestic dog",
-        image: ""
+        image: "https://upload.wikimedia.org/wikipedia/commons/3/33/KokoniPurebredDogsGreeceGreekCreamWhiteAdult.jpg"
     },
     {
         name: "Small Münsterländer",
-        image: ""
+        image: "https://www.hundeo.com/wp-content/uploads/2019/11/Kleiner-Mu%CC%88nsterla%CC%88nder-Hunderasse-Profil.jpg"
     },
     {
         name: "Smithfield",
-        image: ""
+        image: "https://www.orivet.com/store-assets/products/386.jpg"
     },
     {
         name: "Smooth Collie",
-        image: ""
+        image: "https://www.purina-arabia.com/sites/default/files/2021-02/BREED%20Hero_0018_border_collie.jpg"
     },
     {
         name: "Smooth Fox Terrier",
-        image: ""
+        image: "https://www.purina.co.uk/sites/default/files/styles/square_medium_440x440/public/2022-07/Fox-Terrier-Smooth-Coat.jpg?itok=EU1nlsfE"
     },
     {
         name: "Soft-Coated Wheaten Terrier",
-        image: ""
+        image: "https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/02/27133003/Wheaten_BreedStandards_0011.jpg"
     },
     {
         name: "South Russian Ovcharka",
-        image: ""
+        image: "https://www.dogbreedinfo.com/images10/SouthRussianOvtcharkaDianeSariByelkJHD.jpg"
     },
     {
         name: "Spanish Mastiff",
-        image: ""
+        image: "https://www.nativebreed.org/wp-content/uploads/2020/07/Spanish-Mastiff.jpg"
     },
     {
         name: "Spanish Water Dog",
-        image: ""
+        image: "https://dogtime.com/wp-content/uploads/sites/12/2022/04/spanish-water-dog-breed-pictures-cover.jpg"
     },
     {
         name: "Spino degli Iblei",
-        image: ""
+        image: "https://im4.freeforumzone.it/up/43/22/1713896712.jpg"
     },
     {
         name: "Spinone Italiano",
-        image: ""
+        image: "https://101dogbreeds.com/wp-content/uploads/2017/01/Spinone-Italiano-Photos.jpg"
     },
     {
         name: "Sporting Lucas Terrier",
-        image: ""
+        image: "https://www.mypetzilla.co.uk/files/4514/7924/5851/Sporting-Lucas-Terrier.jpg"
     },
     {
         name: "Stabyhoun",
-        image: ""
+        image: "https://dogtime.com/wp-content/uploads/sites/12/2011/01/file_23264_Stabyhoun-dog-breed.jpg"
     },
     {
         name: "Staffordshire Bull Terrier",
-        image: ""
+        image: "https://dogtime.com/wp-content/uploads/sites/12/2011/01/file_23292_staffordshire-bull-terrier.jpg?w=460"
     },
     {
         name: "Standard Schnauzer",
-        image: ""
+        image: "https://www.akc.org/wp-content/uploads/2020/05/Standard-Schnauzer-standing-outdoors-500x486.jpg"
     },
     {
         name: "Stephens Stock",
-        image: ""
+        image: "https://ckcusa.com/media/147857/stephens-stock.jpg?preset=ckcBreedImage375"
     },
     {
         name: "Styrian Coarse-haired Hound",
-        image: ""
+        image: "https://fello.pet/wp-content/uploads/2020/12/steirer-profil-klein.jpg"
     },
     {
         name: "Sussex Spaniel",
-        image: ""
+        image: "https://www.akc.org/wp-content/uploads/2017/11/Sussex-Spaniel-On-White-01.jpg"
     },
     {
         name: "Swedish Lapphund",
-        image: ""
+        image: "https://www.akc.org/wp-content/uploads/2017/11/Swedish-Lapphund-On-White-01.jpg"
     },
     {
         name: "Swedish Vallhund",
-        image: ""
+        image: "https://i.pinimg.com/originals/b4/33/81/b43381c83dae3a8ef1738024075425e1.jpg"
     },
     {
         name: "Swinford Bandog",
-        image: ""
+        image: "https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcQPVDefuzjOvtGDTHzUf9GTikpA1xG3-00rB9f06_nanhfEMmdut1eyUg4C2JkCo_p8QwMaHvhJiZmtv90"
     },
     {
         name: "Taigan",
-        image: ""
+        image: "https://www.101dogbreeds.com/wp-content/uploads/2018/04/Kyrgyz-Sighthound.jpg"
     },
     {
         name: "Taiwan Dog",
-        image: ""
+        image: "https://www.akc.org/wp-content/uploads/2017/11/Taiwan-Dog-History-02-500x499.jpg"
     },
     {
         name: "Tamaskan Dog",
-        image: ""
+        image: "https://st4.depositphotos.com/2103197/24043/i/600/depositphotos_240437638-stock-photo-tamaskan-hybrid-dog-seen-side.jpg"
     },
     {
         name: "Tang Dog",
-        image: ""
+        image: "https://upload.wikimedia.org/wikipedia/commons/b/b7/HK_SW_QR_West_pet_Dog_walking_May_2021_SS2_05.jpg"
     },
     {
         name: "Tarsus çatalburun",
-        image: ""
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9OOCqmb0aQLFGibk3jyCoQwkXPA_PlOWczC3LXxOtZQ&usqp=CAU&ec=48665701"
     },
     {
         name: "Tazy",
-        image: ""
+        image: "https://fello.pet/wp-content/uploads/2020/12/tazy-1.jpg"
     },
     {
         name: "Teddy Roosevelt Terrier",
-        image: ""
+        image: "https://static.wixstatic.com/media/953da5_749a5748cdca4a68920f25774a11166d~mv2.jpg/v1/fit/w_2500,h_1330,al_c/953da5_749a5748cdca4a68920f25774a11166d~mv2.jpg"
     },
     {
         name: "Telomian",
-        image: ""
+        image: "https://upload.wikimedia.org/wikipedia/commons/8/89/Telomian.jpg"
     },
     {
         name: "Tenterfield Terrier",
-        image: ""
+        image: "https://petsy.com.au/wp-content/dog-breed-images/tenterfield-terrier-adult-black-white-and-tan.jpg"
     },
     {
         name: "Terrier Brasileiro",
-        image: ""
+        image: "https://img.freepik.com/fotos-premium/terrier-brasileiro-isolado_87557-13778.jpg?w=2000"
     },
     {
         name: "Thai Bangkaew Dog",
-        image: ""
+        image: "https://brit-petfood.com/file/nodes/product/thajsky%20spic.JPG"
     },
     {
         name: "Thai Ridgeback",
-        image: ""
+        image: "https://dogtime.com/wp-content/uploads/sites/12/gallery/thai-ridgeback-dog-breed-pictures/thai-ridgeback-dog-breed-pictures-1.jpg"
     },
     {
         name: "Tibetan Kyi Apso",
-        image: ""
+        image: "https://nationalpurebreddogday.com/wp-content/uploads/2017/01/a4382b071b3528df144e16eaf0939598.jpg"
     },
     {
         name: "Tibetan Mastiff",
-        image: ""
+        image: "https://www.thesprucepets.com/thmb/ltpjpqJIkTh6z2G5wp2tF-FWEhs=/1566x0/filters:no_upscale():strip_icc()/GettyImages-1214648223-a185de9c88984ca69f1ac720bdea6efe.jpg"
     },
     {
         name: "Tibetan Spaniel",
-        image: ""
+        image: "https://thumbs.dreamstime.com/b/tibetan-spaniel-standing-years-old-white-89215886.jpg"
     },
     {
         name: "Tibetan Terrier",
-        image: ""
+        image: "https://upload.wikimedia.org/wikipedia/commons/8/8b/Tibetan_terrier.jpg"
     },
     {
         name: "Tonya Finosu",
-        image: ""
+        image: "https://www.researchgate.net/profile/Richard-Wilson-19/publication/282005963/figure/fig11/AS:649285259493376@1531813077384/The-Tonya-Finosu-Fino-of-Tonya-is-another-classic-Spitz-type-that-is-found-only-as-a_Q320.jpg"
     },
     {
         name: "Torkuz",
-        image: ""
+        image: "https://i.pinimg.com/736x/74/a6/2c/74a62c05897979194449d7e435804f86.jpg"
     },
     {
         name: "Tornjak",
-        image: ""
+        image: "https://www.dogzone.com/images/breeds/tornjak-800.jpg"
     },
     {
         name: "Tosa Inu",

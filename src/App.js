@@ -98,7 +98,7 @@ function App() {
     },
     {
         name: "American Hairless Terrier",
-        image: "https://static.wikia.nocookie.net/akc-dog-breeds/images/6/61/American-Hairless-Terrier.jpg/revision/latest?cb=20180125220159"
+        image: "https://dogtime.com/wp-content/uploads/sites/12/2020/04/american-hairless-terrier-dog-breed-pictures-cover.jpg"
     },
     {
         name: "American Leopard Hound",
@@ -942,7 +942,7 @@ function App() {
     },
     {
         name: "Gull Dong",
-        image: "https://p1.hiclipart.com/preview/100/664/915/american-bully-dog-dogo-argentino-american-pit-bull-terrier-cordoba-fighting-dog-american-bulldog-guatemalan-dogo-gull-dong-gull-terr-png-clipart-thumbnail.jpg"
+        image: "https://www.kget.com/wp-content/uploads/sites/2/2019/12/5f1ef9db34ff4671875b7ff4b9f36e51.jpg?strip=1"
     },
     {
         name: "Gull Terrier",
@@ -1318,7 +1318,7 @@ function App() {
     },
     {
         name: "Mucuchies",
-        image: "https://www.easypetmd.com/sites/default/files/Mucuchies%20(1).jpg"
+        image: "https://ultimasnoticias.com.ve/wp-content/uploads/2021/10/MUCUCHIES-2.jpg"
     },
     {
         name: "Mudhol Hound",

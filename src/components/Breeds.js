@@ -7,6 +7,7 @@ import "../styles/main.css";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import ListGroup from "react-bootstrap/ListGroup";
+import Card from 'react-bootstrap/Card';
 import myDogs from "../assets/mydogs.jpg"
 
 function Breeds(props) {
@@ -103,26 +104,43 @@ let dogBreeds=props.dogBreeds
           ) : (
             <button style={{ display: "none" }}></button>
           )}
+            <ListGroup className="current-dog-makeup" as="ul">
           {starterDogArray.map((STA, i) => {
             return (
-              <ListGroup className="current-dog-makeup" key={"a" + i} as="ul">
+            // <Card style={{ width: '16%', margin: '0 1%' }}>
+            //   <Card.Body>
+            //   <Card.Img variant="top" src={STA.image} />
+            //     <Card.Text>
+            //     {STA.breedName} - {STA.percentage}%{" "}
+            //     </Card.Text>
+            //   <Button className="delete-item-btn"
+            //     onClick={() => clearItem(STA)}>Clear Item</Button>
+            //   </Card.Body>
+            // </Card>
                 <ListGroup.Item
-                  style={{ width: "18rem" }}
                   key={"b" + i}
                   as="li"
                 >
+                  <div>
+                  <div style={{ display: "inline-block" }}>
                   <img width="75px" src={STA.image} />
+                  </div>
+                  <p style={{ display: "inline-block" }}>
                   {STA.breedName} - {STA.percentage}%{" "}
+                  </p>
+                  <div style={{ display: "inline-block" }}>
                   <button
                     className="delete-item-btn"
                     onClick={() => clearItem(STA)}
                   >
                     &times;
                   </button>
+                  </div>
+                  </div>
                 </ListGroup.Item>
-              </ListGroup>
             );
           })}
+          </ListGroup>
           <p>
             <strong>Total Dog Breed Makeup: {totalPercentage}%</strong>
           </p>

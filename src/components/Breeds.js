@@ -60,7 +60,6 @@ let dogBreeds=props.dogBreeds
 
   return (
     <>
-      <div className="form-container">
       <div className="randomImgContainer">
       <h4>{randomDogImage.name}</h4>
       <button onClick={() => changeRandomDogImage()} className="center-btn" type="submit" >
@@ -68,8 +67,9 @@ let dogBreeds=props.dogBreeds
         </button>
         <h5>Click image for random dog picture</h5>
       </div>
-        <p>Choose your breeds:</p>
 
+      <div className="form-container">
+        <p>Choose your breeds:</p>
         <Form onSubmit={handleAddBreedPartForm}>
           <Form.Select
             placeholder="Select your breed"

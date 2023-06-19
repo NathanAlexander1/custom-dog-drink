@@ -1,6 +1,9 @@
-import Breeds from "./components/Breeds";
 import { useEffect, useInsertionEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Breeds from "./components/Breeds";
+import DogBreeds from "./data/DogBreeds"
+import Cocktail from "./components/Cocktail";
+
 
 function App() {
   const dogBreeds = [

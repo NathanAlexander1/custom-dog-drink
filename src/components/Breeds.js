@@ -112,11 +112,11 @@ function Breeds(props) {
           <h2>Your Current Dog:</h2>
           {(starterDogArray.length > 0) ?
           (<div className="list-cards-toggle">
-          <h6 style={{ margin: "0px 5px" }}>List</h6>
           <input type="checkbox" id="switch" className="checkbox" onChange={handleListOrCardChange} />
           <label htmlFor="switch" className="toggle">
+          <h4 style={{ margin: "0px", padding: "0 5px 0 0" }}>List</h4>
+          <h4 style={{ margin: "0px", padding: "0 0 0 8px"}}>Cards</h4>
           </label>
-          <h6 style={{ margin: "0px 5px" }}>Cards</h6>
           </div>)
           :(<button style={{ display: "none" }}></button>)}
 
@@ -129,10 +129,10 @@ function Breeds(props) {
           ) : (
             <button style={{ display: "none" }}></button>
           )}
-          <ListGroup className={(breedListDisplayType === true) ? "current-dog-makeup-cards" : "current-dog-makeup-list"} as="ul">
+          <ListGroup className={(breedListDisplayType === true) ? "current-dog-makeup-cards" : "current-dog-makeup-list"} as="ul" >
             {starterDogArray.map((STA, i) => {
               return breedListDisplayType === true ? (
-                <Card style={{ width: "16%", margin: "2% 1%" }}>
+                <Card style={{ width: "30%", margin: "1% 1.66%"}}>
                   <Card.Body>
                     <Card.Img variant="top" src={STA.image} />
                     <Card.Text>

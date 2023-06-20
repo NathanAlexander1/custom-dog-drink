@@ -7,8 +7,8 @@ import "../styles/main.css";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import ListGroup from "react-bootstrap/ListGroup";
-import Card from 'react-bootstrap/Card';
-import myDogs from "../assets/mydogs.jpg"
+import Card from "react-bootstrap/Card";
+import myDogs from "../assets/mydogs.jpg";
 
 function Breeds(props) {
   const [starterDogArray, setStarterDogArray] = useState([]);
@@ -16,18 +16,22 @@ function Breeds(props) {
   const [currentDogBreedPercentage, setCurrentDogBreedPercentage] =
     useState("");
   const [totalPercentage, setTotalPercentage] = useState(0);
-   const [randomDogImage, setRandomDogImage] = useState({name:"My dogs", image: myDogs});
+  const [breedListDisplayType, setBreedListDisplayType] = useState(false);
+  const [randomDogImage, setRandomDogImage] = useState({
+    name: "My dogs",
+    image: myDogs,
+  });
   let dogImg;
 
-let dogBreeds=props.dogBreeds
+  let dogBreeds = props.dogBreeds;
 
   const handleAddBreedPartForm = (e) => {
     e.preventDefault();
-    dogBreeds.map((DB, i)=> {
+    dogBreeds.map((DB, i) => {
       if (DB.name === currentDogBreed) {
         dogImg = DB.image;
       }
-    })
+    });
     const additionalDogBreed = {
       breedName: currentDogBreed,
       percentage: currentDogBreedPercentage,
@@ -54,17 +58,28 @@ let dogBreeds=props.dogBreeds
     setTotalPercentage(0);
   };
   const changeRandomDogImage = () => {
-    setRandomDogImage(dogBreeds[
-      Math.floor(Math.random() * dogBreeds.length)
-    ])
-  }
+    setRandomDogImage(dogBreeds[Math.floor(Math.random() * dogBreeds.length)]);
+  };
+
+  const handleListOrCardChange = () => { 
+    if (breedListDisplayType === true) {
+      setBreedListDisplayType(false)
+    } else {
+      setBreedListDisplayType(true)
+    }
+    
+  }; 
 
   return (
     <>
       <div className="randomImgContainer">
-      <h4>{randomDogImage.name}</h4>
-      <button onClick={() => changeRandomDogImage()} className="center-btn" type="submit" >
-      <img width="200px" src= {randomDogImage.image}/>
+        <h4>{randomDogImage.name}</h4>
+        <button
+          onClick={() => changeRandomDogImage()}
+          className="center-btn"
+          type="submit"
+        >
+          <img width="200px" src={randomDogImage.image} />
         </button>
         <h5>Click image for random dog picture</h5>
       </div>
@@ -95,6 +110,16 @@ let dogBreeds=props.dogBreeds
       <div>
         <div className="current-dog-container">
           <h2>Your Current Dog:</h2>
+          {(starterDogArray.length > 0) ?
+          (<div className="list-cards-toggle">
+          <h6 style={{ margin: "0px 5px" }}>List</h6>
+          <input type="checkbox" id="switch" className="checkbox" onChange={handleListOrCardChange} />
+          <label htmlFor="switch" className="toggle">
+          </label>
+          <h6 style={{ margin: "0px 5px" }}>Cards</h6>
+          </div>)
+          :(<button style={{ display: "none" }}></button>)}
+
           {starterDogArray.length > 0 ? (
             <div className="mb-2">
               <Button onClick={() => clearList()} variant="primary" size="md">
@@ -104,42 +129,42 @@ let dogBreeds=props.dogBreeds
           ) : (
             <button style={{ display: "none" }}></button>
           )}
-            <ListGroup className="current-dog-makeup" as="ul">
-          {starterDogArray.map((STA, i) => {
-            return (
-            // <Card style={{ width: '16%', margin: '0 1%' }}>
-            //   <Card.Body>
-            //   <Card.Img variant="top" src={STA.image} />
-            //     <Card.Text>
-            //     {STA.breedName} - {STA.percentage}%{" "}
-            //     </Card.Text>
-            //   <Button className="delete-item-btn"
-            //     onClick={() => clearItem(STA)}>Clear Item</Button>
-            //   </Card.Body>
-            // </Card>
-                <ListGroup.Item
-                  key={"b" + i}
-                  as="li"
-                >
-                  <div>
+          <ListGroup className={(breedListDisplayType === true) ? "current-dog-makeup-cards" : "current-dog-makeup-list"} as="ul">
+            {starterDogArray.map((STA, i) => {
+              return breedListDisplayType === true ? (
+                <Card style={{ width: "16%", margin: "2% 1%" }}>
+                  <Card.Body>
+                    <Card.Img variant="top" src={STA.image} />
+                    <Card.Text>
+                      {STA.breedName} - {STA.percentage}%{" "}
+                    </Card.Text>
+                    <Button
+                      className="delete-item-btn"
+                      onClick={() => clearItem(STA)}
+                    >
+                      Clear Item
+                    </Button>
+                  </Card.Body>
+                </Card>
+              ) : (
+                <ListGroup.Item key={"b" + i} as="li">
                   <div style={{ display: "inline-block" }}>
-                  <img width="75px" src={STA.image} />
+                    <img width="75px" src={STA.image} />
                   </div>
                   <p style={{ display: "inline-block" }}>
-                  {STA.breedName} - {STA.percentage}%{" "}
+                    {STA.breedName} - {STA.percentage}%{" "}
                   </p>
                   <div style={{ display: "inline-block" }}>
-                  <button
-                    className="delete-item-btn"
-                    onClick={() => clearItem(STA)}
-                  >
-                    &times;
-                  </button>
-                  </div>
+                    <button
+                      className="delete-item-btn"
+                      onClick={() => clearItem(STA)}
+                    >
+                      &times;
+                    </button>
                   </div>
                 </ListGroup.Item>
-            );
-          })}
+              );
+            })}
           </ListGroup>
           <p>
             <strong>Total Dog Breed Makeup: {totalPercentage}%</strong>

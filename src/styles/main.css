@@ -8,6 +8,7 @@
     margin: 5%;
 }
 .form-container, .current-dog-container, .custom-drink-container {
+    /* width:100%; */
     display: flex;
     flex-direction: column;
     align-items: center;

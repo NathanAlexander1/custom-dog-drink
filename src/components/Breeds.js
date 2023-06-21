@@ -118,8 +118,8 @@ function Breeds(props) {
           (<div className="list-cards-toggle">
           <input type="checkbox" id="switch" className="checkbox" onChange={handleListOrCardChange} />
           <label htmlFor="switch" className="toggle">
-          <h4 style={{ margin: "0px", padding: "0 5px 0 5px" }}>List</h4>
-          <h4 style={{ margin: "0px", padding: "0 8px 0 8px"}}>Cards</h4>
+          <h4 style={{ margin: "0px", padding: "2px 5px 0 5px" }}>List</h4>
+          <h4 style={{ margin: "0px", padding: "2px 8px 0 8px"}}>Cards</h4>
           </label>
           </div>)
           :(<img width="100px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Question_Mark_1.svg/2026px-Question_Mark_1.svg.png"/>)}

@@ -88,7 +88,7 @@ function Cocktail(props) {
         </Button>
         <h2>Your Custom Drink:</h2>
         {(breedsToDrinkIngredientsArray.length > 0) ? 
-        <Card style={{ width: '18rem' }}>
+        <Card style={{ width: '50%' }}>
             <Card.Body>
             {/* <Card.Title>Your Custom Drink:</Card.Title> */}
         {breedsToDrinkIngredientsArray.map((AITFNAR, i) => {

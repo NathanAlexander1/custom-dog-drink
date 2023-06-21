@@ -132,7 +132,7 @@ function Breeds(props) {
           <ListGroup className={(breedListDisplayType === true) ? "current-dog-makeup-cards" : "current-dog-makeup-list"} as="ul" >
             {starterDogArray.map((STA, i) => {
               return breedListDisplayType === true ? (
-                <Card style={{ width: "30%", margin: "1% 1.66%"}}>
+                <Card className="breed-card" style={{ width: "30%", margin: "1% 1.66%"}}>
                   <Card.Body>
                     <Card.Img variant="top" src={STA.image} />
                     <Card.Text>

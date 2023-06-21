@@ -128,3 +128,15 @@ p {
 .checkbox {
     display : none;
 }
+
+/* @media screen and (max-width: 559px) {
+    .form-container Form {
+        flex-direction: column;
+    }
+    .current-dog-makeup-cards {
+        flex-direction: column;
+    }
+    .breed-card {
+        width:50% !important;
+    }
+} */

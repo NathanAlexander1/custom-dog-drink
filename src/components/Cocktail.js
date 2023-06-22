@@ -1,8 +1,8 @@
 import React from "react";
 import { useEffect, useInsertionEffect, useState } from "react";
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-import ListGroup from 'react-bootstrap/ListGroup';
+import Button from "react-bootstrap/Button";
+import Card from "react-bootstrap/Card";
+import ListGroup from "react-bootstrap/ListGroup";
 
 function Cocktail(props) {
   let dogBreeds = props.dogBreeds;
@@ -70,7 +70,7 @@ function Cocktail(props) {
           convertBreedToIngredient[
             Math.floor(Math.random() * convertBreedToIngredient.length)
           ];
-        return `${BMA.breedName} - ${BMA.percentage}%`;
+        return BMA;
       })
     );
     // console.log(breedsToDrinkIngredientsArray);
@@ -78,8 +78,20 @@ function Cocktail(props) {
 
   const clearCurrentCocktail = () => {
     // console.log(breedsToDrinkIngredientsArray)
-    setBreedsToDrinkIngredientsArray([])
-  }
+    setBreedsToDrinkIngredientsArray([]);
+  };
+
+  const replaceCocktailItem = (AITFNAR, i) => {
+    // console.log(AITFNAR)
+    // console.log(breedMakeupArray)
+    breedMakeupArray[i].breedName =
+      convertBreedToIngredient[
+        Math.floor(Math.random() * convertBreedToIngredient.length)
+      ];
+    // console.log(breedMakeupArray);
+    setBreedsToDrinkIngredientsArray([...breedMakeupArray]);
+  };
+  
   return (
     <div>
       <div className="custom-drink-container">
@@ -87,23 +99,45 @@ function Cocktail(props) {
           Create Your Custom Cocktail!
         </Button>
         <h2>Your Custom Drink:</h2>
-        {(breedsToDrinkIngredientsArray.length > 0) ? 
-        <Card style={{ width: '18rem' }}>
+        {breedsToDrinkIngredientsArray.length > 0 ? (
+          <Card className="cocktail-card" style={{ width: "65%" }}>
             <Card.Body>
-            {/* <Card.Title>Your Custom Drink:</Card.Title> */}
-        {breedsToDrinkIngredientsArray.map((AITFNAR, i) => {
-          return (
-                <ListGroup className="current-cocktail-makeup" key={"list" + i} as="ul" >
+              {/* <Card.Title>Your Custom Drink:</Card.Title> */}
+              {breedsToDrinkIngredientsArray.map((AITFNAR, i) => {
+                return (
+                  <ListGroup
+                    className="current-cocktail-makeup"
+                    key={"list" + i}
+                    as="ul"
+                  >
                     <ListGroup.Item as="li">
-                    <Card.Text key={"listItem" + 1}>{AITFNAR}
-                    </Card.Text>
+                      <Card.Text key={"listItem" + 1}>
+                        {AITFNAR.breedName} - {AITFNAR.percentage}%
+                      </Card.Text>
+                      <Button onClick={() => replaceCocktailItem(AITFNAR, i)}>
+                        Replace
+                      </Button>
                     </ListGroup.Item>
-                </ListGroup>
-          );
-        })}
-        {(breedsToDrinkIngredientsArray.length > 0) ? <Button className="center-btn" onClick={() => clearCurrentCocktail()} variant="primary" size="md">Clear Cocktail</Button > : <button style={{display:"none"}}></button>}
+                  </ListGroup>
+                );
+              })}
+              {breedsToDrinkIngredientsArray.length > 0 ? (
+                <Button
+                  className="center-btn"
+                  onClick={() => clearCurrentCocktail()}
+                  variant="primary"
+                  size="md"
+                >
+                  Clear Cocktail
+                </Button>
+              ) : (
+                <button style={{ display: "none" }}></button>
+              )}
             </Card.Body>
-        </Card> : <p>Your Drink Will Appear Here</p>}
+          </Card>
+        ) : (
+          <p>Your Drink Will Appear Here</p>
+        )}
       </div>
     </div>
   );

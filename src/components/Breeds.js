@@ -4,6 +4,7 @@ import API from "../utils/API";
 import DogBreeds from "../data/DogBreeds";
 import Cocktail from "./Cocktail";
 import "../styles/main.css";
+import "../styles/toggle.css";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import ListGroup from "react-bootstrap/ListGroup";
@@ -44,8 +45,9 @@ function Breeds(props) {
     );
     setCurrentDogBreed("Affenpinscher");
     setCurrentDogBreedPercentage("");
-    console.log(starterDogArray);
+    // console.log(starterDogArray);
   };
+
   const clearItem = (STA) => {
     // console.log("test" + starterDogArray.indexOf(STA))
     starterDogArray.splice(starterDogArray.indexOf(STA), 1);
@@ -69,10 +71,13 @@ function Breeds(props) {
     }
     
   }; 
+  
 
   return (
     <>
       <div className="randomImgContainer">
+        <h2 >Welcome to DogckTail!</h2>
+        <h5>Click image for random dog picture</h5>
         <h4>{randomDogImage.name}</h4>
         <button
           onClick={() => changeRandomDogImage()}
@@ -81,11 +86,10 @@ function Breeds(props) {
         >
           <img width="200px" src={randomDogImage.image} />
         </button>
-        <h5>Click image for random dog picture</h5>
       </div>
 
       <div className="form-container">
-        <p>Choose your breeds:</p>
+        <p style={{margin:"0 0 5px 0"}}>Choose your breeds:</p>
         <Form onSubmit={handleAddBreedPartForm}>
           <Form.Select
             placeholder="Select your breed"
@@ -114,11 +118,11 @@ function Breeds(props) {
           (<div className="list-cards-toggle">
           <input type="checkbox" id="switch" className="checkbox" onChange={handleListOrCardChange} />
           <label htmlFor="switch" className="toggle">
-          <h4 style={{ margin: "0px", padding: "0 5px 0 0" }}>List</h4>
-          <h4 style={{ margin: "0px", padding: "0 0 0 8px"}}>Cards</h4>
+          <h4 style={{ margin: "0px", padding: "2px 5px 0 5px" }}>List</h4>
+          <h4 style={{ margin: "0px", padding: "2px 8px 0 8px"}}>Cards</h4>
           </label>
           </div>)
-          :(<button style={{ display: "none" }}></button>)}
+          :(<img width="100px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Question_Mark_1.svg/2026px-Question_Mark_1.svg.png"/>)}
 
           {starterDogArray.length > 0 ? (
             <div className="mb-2">
@@ -147,26 +151,22 @@ function Breeds(props) {
                   </Card.Body>
                 </Card>
               ) : (
-                <ListGroup.Item key={"b" + i} as="li">
-                  <div style={{ display: "inline-block" }}>
-                    <img width="75px" src={STA.image} />
-                  </div>
-                  <p style={{ display: "inline-block" }}>
+                <ListGroup.Item className="breed-list-item" key={"b" + i} as="li">
+                    <img width="100px" src={STA.image} />
+                  <p >
                     {STA.breedName} - {STA.percentage}%{" "}
                   </p>
-                  <div style={{ display: "inline-block" }}>
                     <button
                       className="delete-item-btn"
                       onClick={() => clearItem(STA)}
                     >
                       &times;
                     </button>
-                  </div>
                 </ListGroup.Item>
               );
             })}
           </ListGroup>
-          <p>
+          <p className="center-paragraph-text" >
             <strong>Total Dog Breed Makeup: {totalPercentage}%</strong>
           </p>
         </div>

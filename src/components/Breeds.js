@@ -45,7 +45,7 @@ function Breeds(props) {
     );
     setCurrentDogBreed("Affenpinscher");
     setCurrentDogBreedPercentage("");
-    console.log(starterDogArray);
+    // console.log(starterDogArray);
   };
 
   const clearItem = (STA) => {

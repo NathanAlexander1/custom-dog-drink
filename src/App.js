@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Breeds from "./components/Breeds";
 import DogBreeds from "./data/DogBreeds"
 import Cocktail from "./components/Cocktail";
-
+import InputtoOutputSwitch from "./components/InputtoOutputSwitch";
+import RandomImage from "./components/RandomImage";
 
 function App() {
   const dogBreeds = [
@@ -2148,6 +2149,8 @@ function App() {
 
   return (
     <div className="broadest-container">
+      <RandomImage dogBreeds={dogBreeds}/>
+      <InputtoOutputSwitch breeds={<Breeds/>} cocktail={<Cocktail/>}/>
       <Breeds dogBreeds={dogBreeds}/>
       {/* <Router>
         <Routes>

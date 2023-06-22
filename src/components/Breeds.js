@@ -9,7 +9,6 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import ListGroup from "react-bootstrap/ListGroup";
 import Card from "react-bootstrap/Card";
-import myDogs from "../assets/mydogs.jpg";
 
 function Breeds(props) {
   const [starterDogArray, setStarterDogArray] = useState([]);
@@ -18,10 +17,6 @@ function Breeds(props) {
     useState("");
   const [totalPercentage, setTotalPercentage] = useState(0);
   const [breedListDisplayType, setBreedListDisplayType] = useState(false);
-  const [randomDogImage, setRandomDogImage] = useState({
-    name: "My dogs",
-    image: myDogs,
-  });
   let dogImg;
 
   let dogBreeds = props.dogBreeds;
@@ -59,9 +54,6 @@ function Breeds(props) {
     setStarterDogArray([]);
     setTotalPercentage(0);
   };
-  const changeRandomDogImage = () => {
-    setRandomDogImage(dogBreeds[Math.floor(Math.random() * dogBreeds.length)]);
-  };
 
   const handleListOrCardChange = () => { 
     if (breedListDisplayType === true) {
@@ -75,19 +67,6 @@ function Breeds(props) {
 
   return (
     <>
-      <div className="randomImgContainer">
-        <h2 >Welcome to DogckTail!</h2>
-        <h5>Click image for random dog picture</h5>
-        <h4>{randomDogImage.name}</h4>
-        <button
-          onClick={() => changeRandomDogImage()}
-          className="center-btn"
-          type="submit"
-        >
-          <img width="200px" src={randomDogImage.image} />
-        </button>
-      </div>
-
       <div className="form-container">
         <p style={{margin:"0 0 5px 0"}}>Choose your breeds:</p>
         <Form onSubmit={handleAddBreedPartForm}>

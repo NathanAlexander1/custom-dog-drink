@@ -100,8 +100,8 @@ function Breeds(props) {
           <h2>Your Current Dog:</h2>
           {(starterDogArray.length > 0) ?
           (<div className="list-cards-toggle">
-          <input type="checkbox" id="switch" className="checkbox" onChange={handleListOrCardChange} />
-          <label htmlFor="switch" className="toggle">
+          <input type="checkbox" id="breed-component-switch" className="breed-component-checkbox" onChange={handleListOrCardChange} />
+          <label htmlFor="breed-component-switch" className="breed-component-toggle">
           <h4 style={{ margin: "0px", padding: "2px 5px 0 5px" }}>List</h4>
           <h4 style={{ margin: "0px", padding: "2px 8px 0 8px"}}>Cards</h4>
           </label>

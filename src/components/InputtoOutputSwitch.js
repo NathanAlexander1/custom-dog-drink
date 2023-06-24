@@ -3,6 +3,8 @@ import { useEffect, useInsertionEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Cocktail from "./Cocktail";
 import Breeds from "./Breeds";
+import "../styles/toggle.css";
+
 
 function InputtoOutputSwitch(props) {
   const [inputOrOutput, setInputOrOutput] = useState(false);
@@ -15,11 +17,6 @@ function InputtoOutputSwitch(props) {
     console.log(breedsToAppData);
   };
   // console.log(props)
-  const calculateCocktail = () => {
-    setBreedsToDrinkIngredientsArray(breedsToAppData);
-    console.log(breedsToDrinkIngredientsArray);
-    setInputOrOutput(true)
-  };
 
   const handleSwitchBetweenInputAndOutput = () => {
     // console.log(props.breeds.props.dogBreeds)
@@ -31,27 +28,35 @@ function InputtoOutputSwitch(props) {
       // console.log(inputOrOutput)
     }
   };
+
+  const calculateCocktail = () => {
+    setBreedsToDrinkIngredientsArray(breedsToAppData);
+    console.log(breedsToDrinkIngredientsArray);
+    setInputOrOutput(true);
+  };
   return (
-    <div>
-      <div className="list-cards-toggle">
+    <div className="input-output-component-container">
+      <div className="input-output-toggle">
         <input
           type="checkbox"
-          id="switch"
-          className="checkbox"
+          id="input-output-switch"
+          checked={inputOrOutput}
+          className="input-output-component-checkbox"
           onChange={handleSwitchBetweenInputAndOutput}
         />
-        <label htmlFor="switch" className="toggle">
+        <label htmlFor="input-output-switch" className="input-output-component-toggle">
           <h4 style={{ margin: "0px", padding: "2px 5px 0 5px" }}>Input</h4>
           <h4 style={{ margin: "0px", padding: "2px 8px 0 8px" }}>Output</h4>
         </label>
       </div>
       <div>
         {inputOrOutput === false ? (
-          <div>
+          <div className="breed-component-container">
             <Breeds
               dogBreeds={props.dogBreeds}
               bringStarterDogArrayToParent={bringStarterDogArrayToParent}
             />
+            <div className="calculate-btn">
             <Button
               onClick={() => calculateCocktail()}
               variant="primary"
@@ -59,6 +64,7 @@ function InputtoOutputSwitch(props) {
             >
               Create Your Custom Cocktail!
             </Button>
+            </div>
           </div>
         ) : (
           <Cocktail

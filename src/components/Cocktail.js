@@ -8,8 +8,6 @@ function Cocktail(props) {
   // console.log(props)
   let dogBreeds = props.dogBreeds;
   let breedMakeupArray = props.breedsToDrinkIngredientsArray;
-  // let breedPercentage =
-  // console.log(props.breedsToDrinkIngredientsArray);
   const [breedsToDrinkIngredientsArray, setBreedsToDrinkIngredientsArray] =
     useState([breedMakeupArray]);
   let testDataArray = [
@@ -76,8 +74,6 @@ function Cocktail(props) {
   });
 
   // console.log(convertBreedToIngredient)
-
-
   const clearCurrentCocktail = () => {
     console.log(breedsToDrinkIngredientsArray)
     // console.log(breedsToDrinkIngredientsArray)
@@ -98,14 +94,10 @@ function Cocktail(props) {
   return (
     <div>
       <div className="custom-drink-container">
-        {/* <Button onClick={() => calculateCocktail()} variant="primary" size="lg">
-          Create Your Custom Cocktail!
-        </Button> */}
         <h2>Your Custom Drink:</h2>
         {breedsToDrinkIngredientsArray.length > 0 ? (
           <Card className="cocktail-card" style={{ width: "65%" }}>
             <Card.Body>
-              {/* <Card.Title>Your Custom Drink:</Card.Title> */}
               {breedsToDrinkIngredientsArray.map((AITFNAR, i) => {
                 return (
                   <ListGroup

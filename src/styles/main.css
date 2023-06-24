@@ -7,11 +7,25 @@
 .broadest-container {
     margin: 5%;
 }
+/* .input-output-component-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} */
+/* .breed-component-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} */
 .form-container, .current-dog-container, .custom-drink-container {
     /* width:100%; */
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.calculate-btn {
+    display: flex;
+    justify-content: center;
 }
 .custom-drink-container > * {
     margin:1%

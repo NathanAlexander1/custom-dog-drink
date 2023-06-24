@@ -1,3 +1,4 @@
+/* breed component toggle */
 .list-cards-toggle {
     display: flex;
     flex-direction: row;
@@ -6,7 +7,7 @@
 }
 
 /* toggle in label designing */
-.toggle {
+.breed-component-toggle {
     position : relative ;
     /* display : inline-block; */
     display: flex;
@@ -18,7 +19,7 @@
 }
        
 /* After slide changes */
-.toggle:after {
+.breed-component-toggle:after {
     content: '';
     position: absolute;
     width: 42.8%;
@@ -39,7 +40,7 @@ p {
 }
        
 /* Checkbox checked effect */
-.checkbox:checked + .toggle::after {
+.breed-component-checkbox:checked + .breed-component-toggle::after {
     left : 37.8%;
     width: 62.2%;
 }
@@ -50,6 +51,64 @@ p {
 } */
        
 /* Checkbox vanished */
-.checkbox {
+.breed-component-checkbox {
+    display : none;
+}
+
+/* input output toggle */
+.input-output-toggle {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 3%;
+}
+
+/* toggle in label designing */
+.input-output-component-toggle {
+    position : relative ;
+    /* display : inline-block; */
+    display: flex;
+    /* width : 100px; */
+    /* height : 21px; */
+    /* background-color: #0275d8; */
+    /* border-radius: 30px; */
+    /* border: 2px solid #0275d8; */
+}
+       
+/* After slide changes */
+.input-output-component-toggle:after {
+    content: '';
+    position: absolute;
+    width: 42.8%;
+    height:31.66px;
+    /* border-radius: 50%; */
+    /* background-color: #0275d8; */
+    border: 4px solid #0275d8;
+    /* top: 1px;
+    left: 1px; */
+    transition:  all 0.5s;
+    /* opacity: .5; */
+}
+       
+/* Toggle text */
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+       
+/* Checkbox checked effect */
+.input-output-component-checkbox:checked + .input-output-component-toggle::after {
+    left : 37.8%;
+    width: 62.2%;
+}
+       
+/* Checkbox checked toggle label bg color */
+/* .checkbox:checked + .toggle {
+    background-color: #0275d8;
+} */
+       
+/* Checkbox vanished */
+.input-output-component-checkbox {
     display : none;
 }

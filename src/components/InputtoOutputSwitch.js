@@ -40,6 +40,7 @@ function InputtoOutputSwitch(props) {
         <input
           type="checkbox"
           id="input-output-switch"
+          checked={inputOrOutput}
           className="input-output-component-checkbox"
           onChange={handleSwitchBetweenInputAndOutput}
         />

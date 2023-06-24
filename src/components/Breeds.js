@@ -11,6 +11,8 @@ import ListGroup from "react-bootstrap/ListGroup";
 import Card from "react-bootstrap/Card";
 
 function Breeds(props) {
+  // console.log(props.bringStarterDogArrayToParent
+  // )
   const [starterDogArray, setStarterDogArray] = useState([]);
   const [currentDogBreed, setCurrentDogBreed] = useState("");
   const [currentDogBreedPercentage, setCurrentDogBreedPercentage] =
@@ -20,6 +22,10 @@ function Breeds(props) {
   let dogImg;
 
   let dogBreeds = props.dogBreeds;
+
+  const handleStateToSendChildDataToParent = (data) => {
+    props.bringStarterDogArrayToParent(data);
+}
 
   const handleAddBreedPartForm = (e) => {
     e.preventDefault();
@@ -41,6 +47,7 @@ function Breeds(props) {
     setCurrentDogBreed("Affenpinscher");
     setCurrentDogBreedPercentage("");
     // console.log(starterDogArray);
+    handleStateToSendChildDataToParent(starterDogArray)
   };
 
   const clearItem = (STA) => {
@@ -149,7 +156,7 @@ function Breeds(props) {
             <strong>Total Dog Breed Makeup: {totalPercentage}%</strong>
           </p>
         </div>
-        <Cocktail breedMakeupArray={starterDogArray} dogBreeds={dogBreeds} />
+        {/* <Cocktail breedMakeupArray={starterDogArray} dogBreeds={dogBreeds} /> */}
       </div>
     </>
   );

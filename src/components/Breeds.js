@@ -9,22 +9,23 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import ListGroup from "react-bootstrap/ListGroup";
 import Card from "react-bootstrap/Card";
-import myDogs from "../assets/mydogs.jpg";
 
 function Breeds(props) {
+  // console.log(props.bringStarterDogArrayToParent
+  // )
   const [starterDogArray, setStarterDogArray] = useState([]);
   const [currentDogBreed, setCurrentDogBreed] = useState("");
   const [currentDogBreedPercentage, setCurrentDogBreedPercentage] =
     useState("");
   const [totalPercentage, setTotalPercentage] = useState(0);
   const [breedListDisplayType, setBreedListDisplayType] = useState(false);
-  const [randomDogImage, setRandomDogImage] = useState({
-    name: "My dogs",
-    image: myDogs,
-  });
   let dogImg;
 
   let dogBreeds = props.dogBreeds;
+
+  const handleStateToSendChildDataToParent = (data) => {
+    props.bringStarterDogArrayToParent(data);
+}
 
   const handleAddBreedPartForm = (e) => {
     e.preventDefault();
@@ -46,6 +47,7 @@ function Breeds(props) {
     setCurrentDogBreed("Affenpinscher");
     setCurrentDogBreedPercentage("");
     // console.log(starterDogArray);
+    handleStateToSendChildDataToParent(starterDogArray)
   };
 
   const clearItem = (STA) => {
@@ -58,9 +60,6 @@ function Breeds(props) {
     //   console.log("test")
     setStarterDogArray([]);
     setTotalPercentage(0);
-  };
-  const changeRandomDogImage = () => {
-    setRandomDogImage(dogBreeds[Math.floor(Math.random() * dogBreeds.length)]);
   };
 
   const handleListOrCardChange = () => { 
@@ -75,19 +74,6 @@ function Breeds(props) {
 
   return (
     <>
-      <div className="randomImgContainer">
-        <h2 >Welcome to DogckTail!</h2>
-        <h5>Click image for random dog picture</h5>
-        <h4>{randomDogImage.name}</h4>
-        <button
-          onClick={() => changeRandomDogImage()}
-          className="center-btn"
-          type="submit"
-        >
-          <img width="200px" src={randomDogImage.image} />
-        </button>
-      </div>
-
       <div className="form-container">
         <p style={{margin:"0 0 5px 0"}}>Choose your breeds:</p>
         <Form onSubmit={handleAddBreedPartForm}>
@@ -170,7 +156,7 @@ function Breeds(props) {
             <strong>Total Dog Breed Makeup: {totalPercentage}%</strong>
           </p>
         </div>
-        <Cocktail breedMakeupArray={starterDogArray} dogBreeds={dogBreeds} />
+        {/* <Cocktail breedMakeupArray={starterDogArray} dogBreeds={dogBreeds} /> */}
       </div>
     </>
   );

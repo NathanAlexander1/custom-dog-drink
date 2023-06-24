@@ -5,12 +5,13 @@ import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
 
 function Cocktail(props) {
+  // console.log(props)
   let dogBreeds = props.dogBreeds;
-  let breedMakeupArray = props.breedMakeupArray;
+  let breedMakeupArray = props.breedsToDrinkIngredientsArray;
   // let breedPercentage =
-  //   console.log(props.breedMakeupArray);
+  // console.log(props.breedsToDrinkIngredientsArray);
   const [breedsToDrinkIngredientsArray, setBreedsToDrinkIngredientsArray] =
-    useState([]);
+    useState([breedMakeupArray]);
   let testDataArray = [
     "Vodka",
     "Gin",
@@ -57,13 +58,7 @@ function Cocktail(props) {
     "Coca-Cola",
   ];
 
-  const convertBreedToIngredient = dogBreeds.map((DB) => {
-    DB = testDataArray[Math.floor(Math.random() * testDataArray.length)];
-    return DB;
-  });
-
-  // console.log(convertBreedToIngredient)
-  const calculateCocktail = () => {
+  useEffect(() => {
     setBreedsToDrinkIngredientsArray(
       breedMakeupArray.map((BMA) => {
         BMA.breedName =
@@ -73,10 +68,18 @@ function Cocktail(props) {
         return BMA;
       })
     );
-    // console.log(breedsToDrinkIngredientsArray);
-  };
+  }, []);
+
+  const convertBreedToIngredient = dogBreeds.map((DB) => {
+    DB = testDataArray[Math.floor(Math.random() * testDataArray.length)];
+    return DB;
+  });
+
+  // console.log(convertBreedToIngredient)
+
 
   const clearCurrentCocktail = () => {
+    console.log(breedsToDrinkIngredientsArray)
     // console.log(breedsToDrinkIngredientsArray)
     setBreedsToDrinkIngredientsArray([]);
   };
@@ -95,9 +98,9 @@ function Cocktail(props) {
   return (
     <div>
       <div className="custom-drink-container">
-        <Button onClick={() => calculateCocktail()} variant="primary" size="lg">
+        {/* <Button onClick={() => calculateCocktail()} variant="primary" size="lg">
           Create Your Custom Cocktail!
-        </Button>
+        </Button> */}
         <h2>Your Custom Drink:</h2>
         {breedsToDrinkIngredientsArray.length > 0 ? (
           <Card className="cocktail-card" style={{ width: "65%" }}>

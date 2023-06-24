@@ -70,8 +70,6 @@ function Breeds(props) {
     }
     
   }; 
-  
-
   return (
     <>
       <div className="form-container">
@@ -156,7 +154,6 @@ function Breeds(props) {
             <strong>Total Dog Breed Makeup: {totalPercentage}%</strong>
           </p>
         </div>
-        {/* <Cocktail breedMakeupArray={starterDogArray} dogBreeds={dogBreeds} /> */}
       </div>
     </>
   );

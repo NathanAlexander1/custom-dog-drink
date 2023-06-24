@@ -9,54 +9,6 @@ function InputtoOutputSwitch(props) {
   const [breedsToAppData, setBreedsToAppData] = useState([]);
   const [breedsToDrinkIngredientsArray, setBreedsToDrinkIngredientsArray] =
     useState([]);
-  let testDataArray = [
-    "Vodka",
-    "Gin",
-    "Rum",
-    "Cognac",
-    "Bourbon",
-    "Whiskey",
-    "Tequila",
-    "Scotch",
-    "Pisco",
-    "Sparkling Wine/Champagne",
-    "White Wine",
-    "Orange Juice",
-    "Dry Vermouth",
-    "Rosso/rouge (sweet) Vermouth",
-    "Tomato juice",
-    "Bananas",
-    "Crappy Beer",
-    "Lil bitta ganja",
-    "Lemon Juice",
-    "Aromatic Bitters",
-    "Orange Bitters",
-    "Creole Bitters",
-    "Triple Sec Liqueur",
-    "Apricot Liqueur",
-    "Coffee Liqueur",
-    "Amaretto Liqueur",
-    "Pineapple Juice",
-    "Egg White",
-    "Soda Water (Club Soda)",
-    "Grapefruit Juice",
-    "Apple Juice",
-    "Cranberry Juice",
-    "Elderflower Liqueur",
-    "Mint Leaves",
-    "Agave Syrup",
-    "Ginger Ale",
-    "Maple Syrup",
-    "Tonic Water",
-    "Espresso",
-    "Honey",
-    "Ginger Beer",
-    "Lemon-Lime Soda",
-    "Coca-Cola",
-  ];
-  let breeds = props.breeds;
-  let cocktail = props.cocktail;
-  let dogBreeds = props.dogBreeds;
 
   const bringStarterDogArrayToParent = (dataFromChild) => {
     setBreedsToAppData(dataFromChild);
@@ -94,10 +46,6 @@ function InputtoOutputSwitch(props) {
         </label>
       </div>
       <div>
-        {/* <label>{breedsToAppData}</label>
-        <Cocktail dogBreeds = {props.dogBreeds} bringStarterDogArrayToParent={bringStarterDogArrayToParent}/>
-        {breedsToAppData} */}
-        {/* <Breeds dogbreeds={props.dogbreeds}/> */}
         {inputOrOutput === false ? (
           <div>
             <Breeds
@@ -115,7 +63,6 @@ function InputtoOutputSwitch(props) {
         ) : (
           <Cocktail
             dogBreeds={props.dogBreeds}
-            // breedMakeupArray={breedsToAppData}
             breedsToDrinkIngredientsArray={breedsToDrinkIngredientsArray}
           />
         )}

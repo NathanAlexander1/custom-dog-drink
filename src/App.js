@@ -2645,20 +2645,11 @@ function App() {
       image: "https://i.ytimg.com/vi/i4x0fvLSjpc/mqdefault.jpg",
     },
   ];
-
-  // const handleBringInStarterDogArray = (childData) => {
-  //   // Update the name in the component's state
-  //   setBreedsToAppData({ name: childData });
-  // };
   return (
     <div className="broadest-container">
       <RandomImage dogBreeds={dogBreeds} />
       <InputtoOutputSwitch dogBreeds={dogBreeds}
-        breeds={<Breeds dogBreeds={dogBreeds} />}
-        cocktail={<Cocktail dogBreeds={dogBreeds}  />}
-
       />
-      {/* <Breeds dogBreeds={dogBreeds}/> */}
       {/* <Router>
         <Routes>
           <Route path="/main" element={<Main />} />

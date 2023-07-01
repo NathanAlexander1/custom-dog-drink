@@ -1,6 +1,7 @@
 import React from "react";
 import { useEffect, useInsertionEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
+import RandomImage from "./RandomImage";
 import Cocktail from "./Cocktail";
 import Breeds from "./Breeds";
 import "../styles/toggle.css";
@@ -36,6 +37,7 @@ function InputtoOutputSwitch(props) {
   };
   return (
     <div className="input-output-component-container">
+        <RandomImage dogBreeds={props.dogBreeds} />
       <div className="input-output-toggle">
         <input
           type="checkbox"
@@ -45,8 +47,8 @@ function InputtoOutputSwitch(props) {
           onChange={handleSwitchBetweenInputAndOutput}
         />
         <label htmlFor="input-output-switch" className="input-output-component-toggle">
-          <h4 style={{ margin: "0px", padding: "2px 5px 0 5px" }}>Input</h4>
-          <h4 style={{ margin: "0px", padding: "2px 8px 0 8px" }}>Output</h4>
+          <h4 style={{ margin: "0px", padding: "2px 5px 0 5px" }}>Dog Breeds</h4>
+          <h4 style={{ margin: "0px", padding: "2px 8px 0 8px" }}>Cocktail</h4>
         </label>
       </div>
       <div>

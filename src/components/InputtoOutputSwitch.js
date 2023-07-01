@@ -72,6 +72,7 @@ function InputtoOutputSwitch(props) {
           <Cocktail
             dogBreeds={props.dogBreeds}
             breedsToDrinkIngredientsArray={breedsToDrinkIngredientsArray}
+            inputOutputDataType={props.inputOutputDataType}
           />
         )}
       </div>

@@ -1,15 +1,15 @@
 import { useEffect, useInsertionEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Breeds from "./components/Breeds";
-import DogBreeds from "./data/DogBreeds";
 import Cocktail from "./components/Cocktail";
+import DataArrays from "./components/DataArrays";
 import InputtoOutputSwitch from "./components/InputtoOutputSwitch";
-import RandomImage from "./components/RandomImage";
+import Form from "react-bootstrap/Form";
+import Button from "react-bootstrap/Button";
 
 function App() {
-  const [breedsToAppData, setBreedsToAppData] = useState({
-    starterDogArray: "",
-  });
+  const dataInputTypes = ["Dogs", "Cats"];
+  const dataOutputTypes = ["Cocktail", "Smoothie"]
   const dogBreeds = [
     {
       name: "Other",
@@ -2645,11 +2645,113 @@ function App() {
       image: "https://i.ytimg.com/vi/i4x0fvLSjpc/mqdefault.jpg",
     },
   ];
+  const catBreeds = [
+    {
+      name: "Other",
+      image:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Question_Mark_1.svg/2026px-Question_Mark_1.svg.png",
+    },
+    {
+      name: "Abyssinian",
+      image:
+        "https://catological.b-cdn.net/wp-content/uploads/2017/09/abyssinian.jpg",
+    },
+    {
+      name: "Aegean",
+      image:
+        "https://catological.b-cdn.net/wp-content/uploads/2017/09/aegean.jpg",
+    },
+    {
+      name: "American Bobtail",
+      image:
+        "https://catological.b-cdn.net/wp-content/uploads/2017/09/americanbobtail.jpg",
+    },
+    {
+      name: "American Curl",
+      image:
+        "https://catological.b-cdn.net/wp-content/uploads/2017/09/americancurl.jpg",
+    },
+    {
+      name: "American Ringtail",
+      image:
+        "https://catological.b-cdn.net/wp-content/uploads/2017/09/americanringtail.jpg",
+    },
+    {
+      name: "American Shorthair",
+      image:
+        "https://catological.b-cdn.net/wp-content/uploads/2017/09/americanshorthair.jpg",
+    },
+    {
+      name: "American Wirehair",
+      image:
+        "https://catological.b-cdn.net/wp-content/uploads/2017/09/americanwirehair.jpg",
+    },
+    {
+      name: "Arabian Mau",
+      image:
+        "https://catological.b-cdn.net/wp-content/uploads/2017/09/arabianmau.jpg",
+    },
+    {
+      name: "Asian - Malayan",
+      image:
+        "https://catological.b-cdn.net/wp-content/uploads/2017/09/asian-malayan.jpg",
+    },
+    {
+      name: "Asian Longhair - Tiffany",
+      image:
+        "https://catological.b-cdn.net/wp-content/uploads/2017/09/asianlonghair-tiffany.jpg",
+    },
+    {
+      name: "Austalian Mist",
+      image:
+        "https://catological.b-cdn.net/wp-content/uploads/2017/09/australianmist.jpg",
+    },
+    {
+      name: "Balinese",
+      image:
+        "https://catological.b-cdn.net/wp-content/uploads/2017/09/balinese.jpg",
+    },
+  ];
+  const [selectInputData, setSelectInputData] = useState("Dogs");
+  const [selectOutputData, setSelectOutputData] = useState("Cocktail");
+  const [breedsToAppData, setBreedsToAppData] = useState(dogBreeds);
+
+  const handleSelectDataTypes = (e) => {
+    e.preventDefault();
+    if (selectInputData === "Dogs") {
+      setBreedsToAppData(dogBreeds);
+      console.log(breedsToAppData);
+    } else {
+      setBreedsToAppData(catBreeds);
+      console.log(breedsToAppData);
+    }
+  };
   return (
     <div className="broadest-container">
-      <RandomImage dogBreeds={dogBreeds} />
-      <InputtoOutputSwitch dogBreeds={dogBreeds}
-      />
+      <Form onSubmit={handleSelectDataTypes}>
+        <Form.Select
+          placeholder="Select your input data"
+          onChange={(e) => setSelectInputData(e.target.value)}
+          aria-label="Default select example"
+        >
+          {dataInputTypes.map((DIT, i) => {
+            return <option key={"data " + i}>{DIT}</option>;
+          })}
+        </Form.Select>
+        <Form.Select
+          placeholder="Select your input data"
+          onChange={(e) => setSelectOutputData(e.target.value)}
+          aria-label="Default select example"
+        >
+          {dataOutputTypes.map((DOT, i) => {
+            return <option key={"data " + i}>{DOT}</option>;
+          })}
+        </Form.Select>
+        <Button className="center-btn" type="submit" variant="primary">
+          Select
+        </Button>{" "}
+      </Form>
+      <InputtoOutputSwitch dogBreeds={breedsToAppData} inputOutputDataType={{inputData: selectInputData, outputData: selectOutputData}}/>
       {/* <Router>
         <Routes>
           <Route path="/main" element={<Main />} />

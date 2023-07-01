@@ -7,10 +7,7 @@ import ListGroup from "react-bootstrap/ListGroup";
 function Cocktail(props) {
   // console.log(props)
   let dogBreeds = props.dogBreeds;
-  let breedMakeupArray = props.breedsToDrinkIngredientsArray;
-  const [breedsToDrinkIngredientsArray, setBreedsToDrinkIngredientsArray] =
-    useState([breedMakeupArray]);
-  let testDataArray = [
+  let cocktailDataArray = [
     "Vodka",
     "Gin",
     "Rum",
@@ -55,10 +52,36 @@ function Cocktail(props) {
     "Lemon-Lime Soda",
     "Coca-Cola",
   ];
+  let smoothieDataArray = [
+    "Chia Seeds",
+    "Flax Seeds",
+    "Oat Milk",
+    "Mango",
+    "Pineapple",
+    "Blueberries",
+    "Strawberries",
+    "Raspberries",
+    "Dates",
+    "Acai Powder",
+    "Agave",
+    "Spinach",
+    "Kale"
+  ]
+  let breedMakeupArray = props.breedsToDrinkIngredientsArray;
+
+  const [breedsToDrinkIngredientsArray, setBreedsToDrinkIngredientsArray] =
+    useState(breedMakeupArray);
+
+    const [outputDataType, setOutputDataType] = useState(cocktailDataArray);
 
   useEffect(() => {
+    if (props.inputOutputDataType.outputData === "Cocktail") {
+      setOutputDataType(cocktailDataArray)
+    } else {
+      setOutputDataType(smoothieDataArray)
+    }
     setBreedsToDrinkIngredientsArray(
-      breedMakeupArray.map((BMA) => {
+      [...breedMakeupArray].map((BMA) => {
         BMA.breedName =
           convertBreedToIngredient[
             Math.floor(Math.random() * convertBreedToIngredient.length)
@@ -69,7 +92,7 @@ function Cocktail(props) {
   }, []);
 
   const convertBreedToIngredient = dogBreeds.map((DB) => {
-    DB = testDataArray[Math.floor(Math.random() * testDataArray.length)];
+    DB = outputDataType[Math.floor(Math.random() * outputDataType.length)];
     return DB;
   });
 

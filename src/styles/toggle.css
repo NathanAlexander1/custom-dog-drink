@@ -80,7 +80,7 @@ p {
 .input-output-component-toggle:after {
     content: '';
     position: absolute;
-    width: 42.8%;
+    width: 54.5%;
     height:31.66px;
     /* border-radius: 50%; */
     /* background-color: #0275d8; */
@@ -99,8 +99,8 @@ p {
        
 /* Checkbox checked effect */
 .input-output-component-checkbox:checked + .input-output-component-toggle::after {
-    left : 37.8%;
-    width: 62.2%;
+    right : 0%;
+    width: 42.2%;
 }
        
 /* Checkbox checked toggle label bg color */

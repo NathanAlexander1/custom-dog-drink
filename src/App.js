@@ -3,12 +3,13 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Breeds from "./components/Breeds";
 import Cocktail from "./components/Cocktail";
 import DataArrays from "./components/DataArrays";
+import RandomImage from "./components/RandomImage";
 import InputtoOutputSwitch from "./components/InputtoOutputSwitch";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+// import "./styles/main.css";
 
 function App() {
-
   //input data
   const dogBreedsListOptions = [
     {
@@ -2712,7 +2713,6 @@ function App() {
         "https://catological.b-cdn.net/wp-content/uploads/2017/09/balinese.jpg",
     },
   ];
-
   //output data
   let cocktailDataArray = [
     "Vodka",
@@ -2772,18 +2772,21 @@ function App() {
     "Agave",
     "Spinach",
     "Kale",
-    "Bananas"
-  ]
+    "Bananas",
+  ];
   const dataInputCategories = ["Dogs", "Cats"];
-  const [selectInputDataCategory, setSelectInputDataCategory] = useState("Dogs");
-  const dataOutputCategories = ["Cocktail", "Smoothie"]
-  const [selectOutputDataCategory, setSelectOutputDataCategory] = useState("Cocktail");
+  const [selectInputDataCategory, setSelectInputDataCategory] = useState("");
+  const dataOutputCategories = ["Cocktail", "Smoothie"];
+  const [selectOutputDataCategory, setSelectOutputDataCategory] = useState("");
   const [inputArrayData, setInputArrayData] = useState(dogBreedsListOptions);
   // console.log(inputArrayData)
   const [outputDataType, setOutputDataType] = useState(cocktailDataArray);
+  const [buttonClicked, setButtonClicked] = useState(false);
 
   const handleSelectDataTypes = (e) => {
     e.preventDefault();
+    setButtonClicked(true);
+    console.log(e);
     if (selectInputDataCategory === "Dogs") {
       setInputArrayData(dogBreedsListOptions);
       // console.log(inputArrayData);
@@ -2802,30 +2805,49 @@ function App() {
   };
   return (
     <div className="broadest-container">
-      <Form onSubmit={handleSelectDataTypes}>
-        <Form.Select
-          placeholder="Select your input data"
-          onChange={(e) => setSelectInputDataCategory(e.target.value)}
-          aria-label="Default select example"
-        >
-          {dataInputCategories.map((DIC, i) => {
-            return <option key={"data " + i}>{DIC}</option>;
-          })}
-        </Form.Select>
-        <Form.Select
-          placeholder="Select your input data"
-          onChange={(e) => setSelectOutputDataCategory(e.target.value)}
-          aria-label="Default select example"
-        >
-          {dataOutputCategories.map((DOC, i) => {
-            return <option key={"data " + i}>{DOC}</option>;
-          })}
-        </Form.Select>
-        <Button className="center-btn" type="submit" variant="primary">
-          Select
-        </Button>{" "}
-      </Form>
-      <InputtoOutputSwitch inputArrayData={inputArrayData} outputArrayData= {outputDataType} selectInputDataCategory = {selectInputDataCategory} selectOutputDataCategory={selectOutputDataCategory}/>
+      <h2>Welcome to DogckTail!</h2>
+      {buttonClicked === false ? (
+        <div className="broadest-container">
+          <RandomImage inputArrayData={inputArrayData} />
+          <Form
+            onSubmit={handleSelectDataTypes}
+            className="setInputOutputFormContainer"
+          >
+            <Form.Select
+              className="inputOutputDataTypes"
+              placeholder="Select your input data"
+              onChange={(e) => setSelectInputDataCategory(e.target.value)}
+              aria-label="Default select example"
+            >
+              <option>Select your input data type</option>
+              {dataInputCategories.map((DIC, i) => {
+                return <option key={"data " + i}>{DIC}</option>;
+              })}
+            </Form.Select>
+            <Form.Select
+              className="inputOutputDataTypes"
+              placeholder="Select your input data"
+              onChange={(e) => setSelectOutputDataCategory(e.target.value)}
+              aria-label="Default select example"
+            >
+              <option>Select your output data type</option>
+              {dataOutputCategories.map((DOC, i) => {
+                return <option key={"data " + i}>{DOC}</option>;
+              })}
+            </Form.Select>
+            <Button className="center-btn" type="submit" variant="primary">
+              Select
+            </Button>{" "}
+          </Form>
+        </div>
+      ) : (
+        <InputtoOutputSwitch
+          inputArrayData={inputArrayData}
+          outputArrayData={outputDataType}
+          selectInputDataCategory={selectInputDataCategory}
+          selectOutputDataCategory={selectOutputDataCategory}
+        />
+      )}
       {/* <Router>
         <Routes>
           <Route path="/main" element={<Main />} />

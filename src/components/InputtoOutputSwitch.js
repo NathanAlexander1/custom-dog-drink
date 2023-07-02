@@ -35,7 +35,6 @@ function InputtoOutputSwitch(props) {
   };
   return (
     <div className="input-output-component-container">
-        <RandomImage inputArrayData={props.inputArrayData} />
       <div className="input-output-toggle">
         <input
           type="checkbox"
@@ -46,11 +45,11 @@ function InputtoOutputSwitch(props) {
         />
         <label htmlFor="input-output-switch" className="input-output-component-toggle">
         {(props.selectInputDataCategory==="Dogs") ?
-          (<h4 style={{ margin: "0px", padding: "2px 8px 0 8px" }}>Dog Breeds</h4>)
-          : (<h4 style={{ margin: "0px", padding: "2px 8px 0 8px" }}>Cat Breeds</h4>)}
+          (<h4 style={{ margin: "0px", padding: "2px 8px 0 8px" }}>Dog Breeds</h4>) : (props.selectInputDataCategory==="Cats")
+          ? (<h4 style={{ margin: "0px", padding: "2px 8px 0 8px" }}>Cat Breeds</h4>) : (<h4 style={{ margin: "0px", padding: "2px 8px 0 8px" }}>Input</h4>)}
           {(props.selectOutputDataCategory==="Cocktail") ?
           (<h4 style={{ margin: "0px", padding: "2px 8px 0 8px" }}>Cocktail</h4>)
-          : (<h4 style={{ margin: "0px", padding: "2px 8px 0 8px" }}>Smoothie</h4>)}
+          : (props.selectOutputDataCategory==="Smoothie") ? (<h4 style={{ margin: "0px", padding: "2px 8px 0 8px" }}>Smoothie</h4>) : (<h4 style={{ margin: "0px", padding: "2px 8px 0 8px" }}>Output</h4>)}
         </label>
       </div>
       <div>
@@ -69,7 +68,7 @@ function InputtoOutputSwitch(props) {
             >
               Create Your Custom {(props.selectOutputDataCategory==="Cocktail") ?
           ('Cocktail')
-          : ('Smoothie')}!
+          : (props.selectOutputDataCategory==="Smoothie") ?('Smoothie') : ("Output")}!
             </Button>
             </div>
           </div>

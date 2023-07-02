@@ -97,8 +97,8 @@ function Breeds(props) {
       <div>
         <div className="current-dog-container">
           <h2>Your Current {(props.selectInputDataCategory==="Dogs") ?
-          ('Dog')
-          : ('Cat')}:</h2>
+          "Dog" : (props.selectInputDataCategory==="Cats")
+          ? "Cat" : "Input"}:</h2>
           {starterDogArray.length > 0 ? (
             <div className="list-cards-toggle">
               <input
@@ -172,12 +172,12 @@ function Breeds(props) {
                   <p>
                     {STA.breedName} - {STA.percentage}%{" "}
                   </p>
-                  <button
-                    className="delete-item-btn"
+                  <Button 
+                    className="simple-icon-button"
                     onClick={() => clearItem(STA)}
                   >
                     &times;
-                  </button>
+                    </Button>
                 </ListGroup.Item>
               );
             })}

@@ -62,7 +62,7 @@ function Cocktail(props) {
           ('Cocktail')
           : ('Smoothie')}:</h2>
         {breedsToDrinkIngredientsArray.length > 0 ? (
-          <Card className="cocktail-card" style={{ width: "65%" }}>
+          <Card className="cocktail-card" >
             <Card.Body>
               {breedsToDrinkIngredientsArray.map((AITFNAR, i) => {
                 // console.log(breedsToDrinkIngredientsArray)
@@ -76,8 +76,8 @@ function Cocktail(props) {
                       <Card.Text key={"listItem" + 1}>
                         {AITFNAR.breedName} - {AITFNAR.percentage}%
                       </Card.Text>
-                      <Button onClick={() => replaceCocktailItem(AITFNAR, i)}>
-                        Replace
+                      <Button className="simple-icon-button" onClick={() => replaceCocktailItem(AITFNAR, i)}>
+                      &#8635;
                       </Button>
                     </ListGroup.Item>
                   </ListGroup>

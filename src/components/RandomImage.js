@@ -14,7 +14,6 @@ function RandomImage(props) {
       };
   return (
     <div className="randomImgContainer">
-    <h2 >Welcome to DogckTail!</h2>
     <h5>Click image for random dog picture</h5>
     <h4>{randomDogImage.name}</h4>
     <button

@@ -2786,18 +2786,18 @@ function App() {
     e.preventDefault();
     if (selectInputDataCategory === "Dogs") {
       setInputArrayData(dogBreedsListOptions);
-      console.log(inputArrayData);
+      // console.log(inputArrayData);
     } else {
       setInputArrayData(catBreedsListOptions);
-      console.log(inputArrayData);
+      // console.log(inputArrayData);
     }
 
     if (selectOutputDataCategory === "Cocktail") {
       setOutputDataType(cocktailDataArray);
-      console.log(outputDataType);
+      // console.log(outputDataType);
     } else {
       setOutputDataType(smoothieDataArray);
-      console.log(outputDataType);
+      // console.log(outputDataType);
     }
   };
   return (
@@ -2825,7 +2825,7 @@ function App() {
           Select
         </Button>{" "}
       </Form>
-      <InputtoOutputSwitch inputArrayData={inputArrayData} outputArrayData= {outputDataType}/>
+      <InputtoOutputSwitch inputArrayData={inputArrayData} outputArrayData= {outputDataType} selectInputDataCategory = {selectInputDataCategory} selectOutputDataCategory={selectOutputDataCategory}/>
       {/* <Router>
         <Routes>
           <Route path="/main" element={<Main />} />

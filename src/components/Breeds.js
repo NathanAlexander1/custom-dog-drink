@@ -96,7 +96,9 @@ function Breeds(props) {
       </div>
       <div>
         <div className="current-dog-container">
-          <h2>Your Current Dog:</h2>
+          <h2>Your Current {(props.selectInputDataCategory==="Dogs") ?
+          ('Dog')
+          : ('Cat')}:</h2>
           {starterDogArray.length > 0 ? (
             <div className="list-cards-toggle">
               <input

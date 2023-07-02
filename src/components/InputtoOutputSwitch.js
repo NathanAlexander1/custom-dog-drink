@@ -10,11 +10,11 @@ import "../styles/toggle.css";
 function InputtoOutputSwitch(props) {
   const [inputOrOutput, setInputOrOutput] = useState(false);
   const [convertedInputToOutputItems, setconvertedInputToOutputItems] = useState([]);
-    console.log(convertedInputToOutputItems)
+    // console.log(convertedInputToOutputItems)
 
   const bringStarterDogArrayToParent = (dataFromChild) => {
     setconvertedInputToOutputItems(dataFromChild);
-    console.log(convertedInputToOutputItems);
+    // console.log(convertedInputToOutputItems);
   };
   // console.log(props)
 
@@ -45,8 +45,12 @@ function InputtoOutputSwitch(props) {
           onChange={handleSwitchBetweenInputAndOutput}
         />
         <label htmlFor="input-output-switch" className="input-output-component-toggle">
-          <h4 style={{ margin: "0px", padding: "2px 5px 0 5px" }}>Dog Breeds</h4>
-          <h4 style={{ margin: "0px", padding: "2px 8px 0 8px" }}>Cocktail</h4>
+        {(props.selectInputDataCategory==="Dogs") ?
+          (<h4 style={{ margin: "0px", padding: "2px 8px 0 8px" }}>Dog Breeds</h4>)
+          : (<h4 style={{ margin: "0px", padding: "2px 8px 0 8px" }}>Cat Breeds</h4>)}
+          {(props.selectOutputDataCategory==="Cocktail") ?
+          (<h4 style={{ margin: "0px", padding: "2px 8px 0 8px" }}>Cocktail</h4>)
+          : (<h4 style={{ margin: "0px", padding: "2px 8px 0 8px" }}>Smoothie</h4>)}
         </label>
       </div>
       <div>
@@ -55,6 +59,7 @@ function InputtoOutputSwitch(props) {
             <Breeds
               inputArrayData={props.inputArrayData}
               bringStarterDogArrayToParent={bringStarterDogArrayToParent}
+              selectInputDataCategory={props.selectInputDataCategory}
             />
             <div className="calculate-btn">
             <Button
@@ -62,7 +67,9 @@ function InputtoOutputSwitch(props) {
               variant="primary"
               size="lg"
             >
-              Create Your Custom Cocktail!
+              Create Your Custom {(props.selectOutputDataCategory==="Cocktail") ?
+          ('Cocktail')
+          : ('Smoothie')}!
             </Button>
             </div>
           </div>
@@ -71,6 +78,7 @@ function InputtoOutputSwitch(props) {
           inputArrayData={props.inputArrayData}
           convertedInputToOutputItems={convertedInputToOutputItems}
           outputArrayData={props.outputArrayData}
+          selectOutputDataCategory={props.selectOutputDataCategory}
           />
         )}
       </div>

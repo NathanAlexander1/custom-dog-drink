@@ -3,14 +3,14 @@ import { useEffect, useInsertionEffect, useState } from "react";
 import myDogs from "../assets/mydogs.jpg";
 
 function RandomImage(props) {
-    let dogBreeds = props.dogBreeds;
+    let inputArrayData = props.inputArrayData;
     const [randomDogImage, setRandomDogImage] = useState({
         name: "My dogs",
         image: myDogs,
       });
 
       const changeRandomDogImage = () => {
-        setRandomDogImage(dogBreeds[Math.floor(Math.random() * dogBreeds.length)]);
+        setRandomDogImage(inputArrayData[Math.floor(Math.random() * inputArrayData.length)]);
       };
   return (
     <div className="randomImgContainer">

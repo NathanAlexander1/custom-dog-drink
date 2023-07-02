@@ -5,83 +5,27 @@ import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
 
 function Cocktail(props) {
-  // console.log(props)
-  let dogBreeds = props.dogBreeds;
-  let cocktailDataArray = [
-    "Vodka",
-    "Gin",
-    "Rum",
-    "Cognac",
-    "Bourbon",
-    "Whiskey",
-    "Tequila",
-    "Scotch",
-    "Pisco",
-    "Sparkling Wine/Champagne",
-    "White Wine",
-    "Orange Juice",
-    "Dry Vermouth",
-    "Rosso/rouge (sweet) Vermouth",
-    "Tomato juice",
-    "Bananas",
-    "Crappy Beer",
-    "Lil bitta ganja",
-    "Lemon Juice",
-    "Aromatic Bitters",
-    "Orange Bitters",
-    "Creole Bitters",
-    "Triple Sec Liqueur",
-    "Apricot Liqueur",
-    "Coffee Liqueur",
-    "Amaretto Liqueur",
-    "Pineapple Juice",
-    "Egg White",
-    "Soda Water (Club Soda)",
-    "Grapefruit Juice",
-    "Apple Juice",
-    "Cranberry Juice",
-    "Elderflower Liqueur",
-    "Mint Leaves",
-    "Agave Syrup",
-    "Ginger Ale",
-    "Maple Syrup",
-    "Tonic Water",
-    "Espresso",
-    "Honey",
-    "Ginger Beer",
-    "Lemon-Lime Soda",
-    "Coca-Cola",
-  ];
-  let smoothieDataArray = [
-    "Chia Seeds",
-    "Flax Seeds",
-    "Oat Milk",
-    "Mango",
-    "Pineapple",
-    "Blueberries",
-    "Strawberries",
-    "Raspberries",
-    "Dates",
-    "Acai Powder",
-    "Agave",
-    "Spinach",
-    "Kale"
-  ]
-  let breedMakeupArray = props.breedsToDrinkIngredientsArray;
+  let outputArrayData = props.outputArrayData
+  console.log(outputArrayData)
+  let inputArrayData = props.inputArrayData;
 
+  let convertedInputToOutputItems = props.convertedInputToOutputItems;
+  
   const [breedsToDrinkIngredientsArray, setBreedsToDrinkIngredientsArray] =
-    useState(breedMakeupArray);
+  useState(convertedInputToOutputItems);
+  console.log(convertedInputToOutputItems)
+  console.log(breedsToDrinkIngredientsArray)
 
-    const [outputDataType, setOutputDataType] = useState(cocktailDataArray);
 
+    const convertBreedToIngredient = inputArrayData.map((DB) => {
+      DB = outputArrayData[Math.floor(Math.random() * outputArrayData.length)];
+      return DB;
+    });
+    
   useEffect(() => {
-    if (props.inputOutputDataType.outputData === "Cocktail") {
-      setOutputDataType(cocktailDataArray)
-    } else {
-      setOutputDataType(smoothieDataArray)
-    }
+
     setBreedsToDrinkIngredientsArray(
-      [...breedMakeupArray].map((BMA) => {
+      convertedInputToOutputItems.map((BMA) => {
         BMA.breedName =
           convertBreedToIngredient[
             Math.floor(Math.random() * convertBreedToIngredient.length)
@@ -91,10 +35,7 @@ function Cocktail(props) {
     );
   }, []);
 
-  const convertBreedToIngredient = dogBreeds.map((DB) => {
-    DB = outputDataType[Math.floor(Math.random() * outputDataType.length)];
-    return DB;
-  });
+
 
   // console.log(convertBreedToIngredient)
   const clearCurrentCocktail = () => {
@@ -105,13 +46,13 @@ function Cocktail(props) {
 
   const replaceCocktailItem = (AITFNAR, i) => {
     // console.log(AITFNAR)
-    // console.log(breedMakeupArray)
-    breedMakeupArray[i].breedName =
+    // console.log(convertedInputToOutputItems)
+    convertedInputToOutputItems[i].breedName =
       convertBreedToIngredient[
         Math.floor(Math.random() * convertBreedToIngredient.length)
       ];
-    // console.log(breedMakeupArray);
-    setBreedsToDrinkIngredientsArray([...breedMakeupArray]);
+    // console.log(convertedInputToOutputItems);
+    setBreedsToDrinkIngredientsArray([...convertedInputToOutputItems]);
   };
   
   return (
@@ -122,6 +63,7 @@ function Cocktail(props) {
           <Card className="cocktail-card" style={{ width: "65%" }}>
             <Card.Body>
               {breedsToDrinkIngredientsArray.map((AITFNAR, i) => {
+                console.log(breedsToDrinkIngredientsArray)
                 return (
                   <ListGroup
                     className="current-cocktail-makeup"

@@ -8,9 +8,9 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 
 function App() {
-  const dataInputTypes = ["Dogs", "Cats"];
-  const dataOutputTypes = ["Cocktail", "Smoothie"]
-  const dogBreeds = [
+
+  //input data
+  const dogBreedsListOptions = [
     {
       name: "Other",
       image:
@@ -2645,7 +2645,7 @@ function App() {
       image: "https://i.ytimg.com/vi/i4x0fvLSjpc/mqdefault.jpg",
     },
   ];
-  const catBreeds = [
+  const catBreedsListOptions = [
     {
       name: "Other",
       image:
@@ -2712,18 +2712,92 @@ function App() {
         "https://catological.b-cdn.net/wp-content/uploads/2017/09/balinese.jpg",
     },
   ];
-  const [selectInputData, setSelectInputData] = useState("Dogs");
-  const [selectOutputData, setSelectOutputData] = useState("Cocktail");
-  const [breedsToAppData, setBreedsToAppData] = useState(dogBreeds);
+
+  //output data
+  let cocktailDataArray = [
+    "Vodka",
+    "Gin",
+    "Rum",
+    "Cognac",
+    "Bourbon",
+    "Whiskey",
+    "Tequila",
+    "Scotch",
+    "Pisco",
+    "Sparkling Wine/Champagne",
+    "White Wine",
+    "Orange Juice",
+    "Dry Vermouth",
+    "Rosso/rouge (sweet) Vermouth",
+    "Tomato juice",
+    "Crappy Beer",
+    "Lil bitta ganja",
+    "Lemon Juice",
+    "Aromatic Bitters",
+    "Orange Bitters",
+    "Creole Bitters",
+    "Triple Sec Liqueur",
+    "Apricot Liqueur",
+    "Coffee Liqueur",
+    "Amaretto Liqueur",
+    "Pineapple Juice",
+    "Egg White",
+    "Soda Water (Club Soda)",
+    "Grapefruit Juice",
+    "Apple Juice",
+    "Cranberry Juice",
+    "Elderflower Liqueur",
+    "Mint Leaves",
+    "Agave Syrup",
+    "Ginger Ale",
+    "Maple Syrup",
+    "Tonic Water",
+    "Espresso",
+    "Honey",
+    "Ginger Beer",
+    "Lemon-Lime Soda",
+    "Coca-Cola",
+  ];
+  let smoothieDataArray = [
+    "Chia Seeds",
+    "Flax Seeds",
+    "Oat Milk",
+    "Mango",
+    "Pineapple",
+    "Blueberries",
+    "Strawberries",
+    "Raspberries",
+    "Dates",
+    "Acai Powder",
+    "Agave",
+    "Spinach",
+    "Kale",
+    "Bananas"
+  ]
+  const dataInputCategories = ["Dogs", "Cats"];
+  const [selectInputDataCategory, setSelectInputDataCategory] = useState("Dogs");
+  const dataOutputCategories = ["Cocktail", "Smoothie"]
+  const [selectOutputDataCategory, setSelectOutputDataCategory] = useState("Cocktail");
+  const [inputArrayData, setInputArrayData] = useState(dogBreedsListOptions);
+  // console.log(inputArrayData)
+  const [outputDataType, setOutputDataType] = useState(cocktailDataArray);
 
   const handleSelectDataTypes = (e) => {
     e.preventDefault();
-    if (selectInputData === "Dogs") {
-      setBreedsToAppData(dogBreeds);
-      console.log(breedsToAppData);
+    if (selectInputDataCategory === "Dogs") {
+      setInputArrayData(dogBreedsListOptions);
+      console.log(inputArrayData);
     } else {
-      setBreedsToAppData(catBreeds);
-      console.log(breedsToAppData);
+      setInputArrayData(catBreedsListOptions);
+      console.log(inputArrayData);
+    }
+
+    if (selectOutputDataCategory === "Cocktail") {
+      setOutputDataType(cocktailDataArray);
+      console.log(outputDataType);
+    } else {
+      setOutputDataType(smoothieDataArray);
+      console.log(outputDataType);
     }
   };
   return (
@@ -2731,27 +2805,27 @@ function App() {
       <Form onSubmit={handleSelectDataTypes}>
         <Form.Select
           placeholder="Select your input data"
-          onChange={(e) => setSelectInputData(e.target.value)}
+          onChange={(e) => setSelectInputDataCategory(e.target.value)}
           aria-label="Default select example"
         >
-          {dataInputTypes.map((DIT, i) => {
-            return <option key={"data " + i}>{DIT}</option>;
+          {dataInputCategories.map((DIC, i) => {
+            return <option key={"data " + i}>{DIC}</option>;
           })}
         </Form.Select>
         <Form.Select
           placeholder="Select your input data"
-          onChange={(e) => setSelectOutputData(e.target.value)}
+          onChange={(e) => setSelectOutputDataCategory(e.target.value)}
           aria-label="Default select example"
         >
-          {dataOutputTypes.map((DOT, i) => {
-            return <option key={"data " + i}>{DOT}</option>;
+          {dataOutputCategories.map((DOC, i) => {
+            return <option key={"data " + i}>{DOC}</option>;
           })}
         </Form.Select>
         <Button className="center-btn" type="submit" variant="primary">
           Select
         </Button>{" "}
       </Form>
-      <InputtoOutputSwitch dogBreeds={breedsToAppData} inputOutputDataType={{inputData: selectInputData, outputData: selectOutputData}}/>
+      <InputtoOutputSwitch inputArrayData={inputArrayData} outputArrayData= {outputDataType}/>
       {/* <Router>
         <Routes>
           <Route path="/main" element={<Main />} />

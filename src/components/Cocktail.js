@@ -6,15 +6,15 @@ import ListGroup from "react-bootstrap/ListGroup";
 
 function Cocktail(props) {
   let outputArrayData = props.outputArrayData
-  console.log(outputArrayData)
+  // console.log(outputArrayData)
   let inputArrayData = props.inputArrayData;
 
   let convertedInputToOutputItems = props.convertedInputToOutputItems;
   
   const [breedsToDrinkIngredientsArray, setBreedsToDrinkIngredientsArray] =
   useState(convertedInputToOutputItems);
-  console.log(convertedInputToOutputItems)
-  console.log(breedsToDrinkIngredientsArray)
+  // console.log(convertedInputToOutputItems)
+  // console.log(breedsToDrinkIngredientsArray)
 
 
     const convertBreedToIngredient = inputArrayData.map((DB) => {
@@ -39,7 +39,7 @@ function Cocktail(props) {
 
   // console.log(convertBreedToIngredient)
   const clearCurrentCocktail = () => {
-    console.log(breedsToDrinkIngredientsArray)
+    // console.log(breedsToDrinkIngredientsArray)
     // console.log(breedsToDrinkIngredientsArray)
     setBreedsToDrinkIngredientsArray([]);
   };
@@ -58,12 +58,14 @@ function Cocktail(props) {
   return (
     <div>
       <div className="custom-drink-container">
-        <h2>Your Custom Drink:</h2>
+        <h2>Your Custom {(props.selectOutputDataCategory==="Cocktail") ?
+          ('Cocktail')
+          : ('Smoothie')}:</h2>
         {breedsToDrinkIngredientsArray.length > 0 ? (
           <Card className="cocktail-card" style={{ width: "65%" }}>
             <Card.Body>
               {breedsToDrinkIngredientsArray.map((AITFNAR, i) => {
-                console.log(breedsToDrinkIngredientsArray)
+                // console.log(breedsToDrinkIngredientsArray)
                 return (
                   <ListGroup
                     className="current-cocktail-makeup"

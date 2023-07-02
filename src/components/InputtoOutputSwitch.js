@@ -9,18 +9,17 @@ import "../styles/toggle.css";
 
 function InputtoOutputSwitch(props) {
   const [inputOrOutput, setInputOrOutput] = useState(false);
-  const [breedsToAppData, setBreedsToAppData] = useState([]);
-  const [breedsToDrinkIngredientsArray, setBreedsToDrinkIngredientsArray] =
-    useState([]);
+  const [convertedInputToOutputItems, setconvertedInputToOutputItems] = useState([]);
+    console.log(convertedInputToOutputItems)
 
   const bringStarterDogArrayToParent = (dataFromChild) => {
-    setBreedsToAppData(dataFromChild);
-    console.log(breedsToAppData);
+    setconvertedInputToOutputItems(dataFromChild);
+    console.log(convertedInputToOutputItems);
   };
   // console.log(props)
 
   const handleSwitchBetweenInputAndOutput = () => {
-    // console.log(props.breeds.props.dogBreeds)
+    // console.log(props.breeds.props.inputArrayData)
     if (inputOrOutput === true) {
       setInputOrOutput(false);
       // console.log(inputOrOutput)
@@ -31,13 +30,12 @@ function InputtoOutputSwitch(props) {
   };
 
   const calculateCocktail = () => {
-    setBreedsToDrinkIngredientsArray(breedsToAppData);
-    console.log(breedsToDrinkIngredientsArray);
+    setconvertedInputToOutputItems([...convertedInputToOutputItems])
     setInputOrOutput(true);
   };
   return (
     <div className="input-output-component-container">
-        <RandomImage dogBreeds={props.dogBreeds} />
+        <RandomImage inputArrayData={props.inputArrayData} />
       <div className="input-output-toggle">
         <input
           type="checkbox"
@@ -55,7 +53,7 @@ function InputtoOutputSwitch(props) {
         {inputOrOutput === false ? (
           <div className="breed-component-container">
             <Breeds
-              dogBreeds={props.dogBreeds}
+              inputArrayData={props.inputArrayData}
               bringStarterDogArrayToParent={bringStarterDogArrayToParent}
             />
             <div className="calculate-btn">
@@ -70,9 +68,9 @@ function InputtoOutputSwitch(props) {
           </div>
         ) : (
           <Cocktail
-            dogBreeds={props.dogBreeds}
-            breedsToDrinkIngredientsArray={breedsToDrinkIngredientsArray}
-            inputOutputDataType={props.inputOutputDataType}
+          inputArrayData={props.inputArrayData}
+          convertedInputToOutputItems={convertedInputToOutputItems}
+          outputArrayData={props.outputArrayData}
           />
         )}
       </div>

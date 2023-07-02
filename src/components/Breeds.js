@@ -20,7 +20,7 @@ function Breeds(props) {
   const [breedListDisplayType, setBreedListDisplayType] = useState(false);
   let dogImg;
 
-  let dogBreeds = props.dogBreeds;
+  let inputArrayData = props.inputArrayData;
 
   const handleStateToSendChildDataToParent = (data) => {
     props.bringStarterDogArrayToParent(data);
@@ -28,7 +28,7 @@ function Breeds(props) {
 
   const handleAddBreedPartForm = (e) => {
     e.preventDefault();
-    dogBreeds.map((DB, i) => {
+    inputArrayData.map((DB, i) => {
       if (DB.name === currentDogBreed) {
         dogImg = DB.image;
       }
@@ -79,7 +79,7 @@ function Breeds(props) {
             onChange={(e) => setCurrentDogBreed(e.target.value)}
             aria-label="Default select example"
           >
-            {dogBreeds.map((DB, i) => {
+            {inputArrayData.map((DB, i) => {
               return <option key={"breed " + i}>{DB.name}</option>;
             })}
           </Form.Select>

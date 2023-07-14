@@ -8,14 +8,13 @@ function Cocktail(props) {
   let outputArrayData = props.outputArrayData
   // console.log(outputArrayData)
   let inputArrayData = props.inputArrayData;
-
   let convertedInputToOutputItems = props.convertedInputToOutputItems;
+  // console.log(convertedInputToOutputItems)
   
   const [breedsToDrinkIngredientsArray, setBreedsToDrinkIngredientsArray] =
   useState(convertedInputToOutputItems);
   // console.log(convertedInputToOutputItems)
   // console.log(breedsToDrinkIngredientsArray)
-
 
     const convertBreedToIngredient = inputArrayData.map((DB) => {
       DB = outputArrayData[Math.floor(Math.random() * outputArrayData.length)];
@@ -26,7 +25,7 @@ function Cocktail(props) {
 
     setBreedsToDrinkIngredientsArray(
       convertedInputToOutputItems.map((BMA) => {
-        BMA.breedName =
+        BMA.liquor =
           convertBreedToIngredient[
             Math.floor(Math.random() * convertBreedToIngredient.length)
           ];
@@ -34,8 +33,6 @@ function Cocktail(props) {
       })
     );
   }, []);
-
-
 
   // console.log(convertBreedToIngredient)
   const clearCurrentCocktail = () => {
@@ -47,7 +44,7 @@ function Cocktail(props) {
   const replaceCocktailItem = (AITFNAR, i) => {
     // console.log(AITFNAR)
     // console.log(convertedInputToOutputItems)
-    convertedInputToOutputItems[i].breedName =
+    convertedInputToOutputItems[i].liquor =
       convertBreedToIngredient[
         Math.floor(Math.random() * convertBreedToIngredient.length)
       ];
@@ -74,7 +71,7 @@ function Cocktail(props) {
                   >
                     <ListGroup.Item as="li">
                       <Card.Text key={"listItem" + 1}>
-                        {AITFNAR.breedName} - {AITFNAR.percentage}%
+                        {AITFNAR.liquor} - {AITFNAR.percentage}%
                       </Card.Text>
                       <Button className="simple-icon-button" onClick={() => replaceCocktailItem(AITFNAR, i)}>
                       &#8635;

@@ -11,15 +11,15 @@ function InputtoOutputSwitch(props) {
   const [inputOrOutput, setInputOrOutput] = useState(false);
   const [convertedInputToOutputItems, setconvertedInputToOutputItems] = useState([]);
     // console.log(convertedInputToOutputItems)
-
   const bringStarterDogArrayToParent = (dataFromChild) => {
+    console.log(dataFromChild)
     setconvertedInputToOutputItems(dataFromChild);
-    // console.log(convertedInputToOutputItems);
+    console.log(convertedInputToOutputItems)
   };
   // console.log(props)
-
   const handleSwitchBetweenInputAndOutput = () => {
     // console.log(props.breeds.props.inputArrayData)
+    console.log(convertedInputToOutputItems)
     if (inputOrOutput === true) {
       setInputOrOutput(false);
       // console.log(inputOrOutput)
@@ -59,6 +59,7 @@ function InputtoOutputSwitch(props) {
               inputArrayData={props.inputArrayData}
               bringStarterDogArrayToParent={bringStarterDogArrayToParent}
               selectInputDataCategory={props.selectInputDataCategory}
+              convertedInputToOutputItems ={convertedInputToOutputItems}
             />
             <div className="calculate-btn">
             <Button

@@ -10,9 +10,7 @@ import ListGroup from "react-bootstrap/ListGroup";
 import Card from "react-bootstrap/Card";
 
 function Breeds(props) {
-  // console.log(props.bringStarterDogArrayToParent
-  // )
-  const [starterDogArray, setStarterDogArray] = useState([]);
+  const [starterDogArray, setStarterDogArray] = useState(props.convertedInputToOutputItems);
   const [currentDogBreed, setCurrentDogBreed] = useState("");
   const [currentDogBreedPercentage, setCurrentDogBreedPercentage] =
     useState("");
@@ -21,6 +19,7 @@ function Breeds(props) {
   let dogImg;
 
   let inputArrayData = props.inputArrayData;
+  // console.log(starterDogArray)
 
   const handleStateToSendChildDataToParent = (data) => {
     props.bringStarterDogArrayToParent(data);
@@ -37,6 +36,7 @@ function Breeds(props) {
       breedName: currentDogBreed,
       percentage: currentDogBreedPercentage,
       image: dogImg,
+      liquor: ""
     };
     starterDogArray.push(additionalDogBreed);
     setStarterDogArray([...starterDogArray]);

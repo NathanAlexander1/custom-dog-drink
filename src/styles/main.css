@@ -39,7 +39,8 @@
     justify-content: center;
 }
 .custom-drink-container > * {
-    margin:1%
+    margin:1%;
+    text-align: center;
 }
 .cocktail-card {
     width: 100% !important

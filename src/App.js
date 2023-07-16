@@ -7,7 +7,14 @@ import RandomImage from "./components/RandomImage";
 import InputtoOutputSwitch from "./components/InputtoOutputSwitch";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-import { dogBreedsListOptions, catBreedsListOptions, cocktailDataArray, smoothieDataArray } from "./const";
+import {
+  dogBreedsListOptions,
+  catBreedsListOptions,
+  cocktailDataArray,
+  smoothieDataArray,
+  testCocktailIngredientsArray,
+} from "./const";
+import API from "../src/utils/API";
 // import "./styles/main.css";
 
 function App() {
@@ -22,6 +29,25 @@ function App() {
   // console.log(inputArrayData)
   const [outputDataType, setOutputDataType] = useState(cocktailDataArray);
   const [buttonClicked, setButtonClicked] = useState(false);
+
+  // console.log(typeof cocktailDataArray[0].description === 'string')
+  // API.containsAlcohol(cocktailDataArray[2].ingredientName).then((data) => {
+  //   console.log(data.ingredients[0].strAlcohol)
+
+  // })
+  // const newCocktailIng = cocktailDataArray.map((CIA) => {
+  //   console.log(CIA.ingredientName)
+  //   API.containsAlcohol(CIA.ingredientName).then((data) => {
+  //     console.log(data.ingredients[0].strAlcohol);
+  //     CIA.ID = data.ingredients[0].idIngredient
+  //     CIA.containsAlcohol = data.ingredients[0].strAlcohol;
+  //     CIA.description = data.ingredients[0].strDescription
+  //   });
+  //   return CIA;
+  // });
+  // console.log(newCocktailIng);
+
+  // console.log(testCocktailIngredientsArray)
 
   const handleSelectDataTypes = (e) => {
     e.preventDefault();

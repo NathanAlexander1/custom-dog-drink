@@ -12,9 +12,9 @@ function InputtoOutputSwitch(props) {
   const [convertedInputToOutputItems, setconvertedInputToOutputItems] = useState([]);
     // console.log(convertedInputToOutputItems)
   const bringStarterDogArrayToParent = (dataFromChild) => {
-    console.log(dataFromChild)
+    // console.log(dataFromChild)
     setconvertedInputToOutputItems(dataFromChild);
-    console.log(convertedInputToOutputItems)
+    // console.log(convertedInputToOutputItems)
   };
   // console.log(props)
   const handleSwitchBetweenInputAndOutput = () => {

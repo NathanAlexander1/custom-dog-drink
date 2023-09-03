@@ -5,24 +5,41 @@ import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
 
 function Cocktail(props) {
-  let outputArrayData = props.outputArrayData
+  let outputArrayData = props.outputArrayData;
   // console.log(outputArrayData)
   let inputArrayData = props.inputArrayData;
   let convertedInputToOutputItems = props.convertedInputToOutputItems;
   // console.log(convertedInputToOutputItems)
-  
+
   const [breedsToDrinkIngredientsArray, setBreedsToDrinkIngredientsArray] =
-  useState(convertedInputToOutputItems);
+    useState(convertedInputToOutputItems);
   // console.log(convertedInputToOutputItems)
   // console.log(breedsToDrinkIngredientsArray)
+  // console.log(outputArrayData)
+  if (breedsToDrinkIngredientsArray.length === 1 && outputArrayData[0].ingredientName.includes("Light rum")) {
+    outputArrayData = outputArrayData.filter(
+      (OAD) => OAD.containsAlcohol === "Yes"
+    );
+    // console.log(outputArrayData.length);
+  } else if (breedsToDrinkIngredientsArray.length === 2 && outputArrayData[0].ingredientName.includes("Light rum")) {
+    console.log(outputArrayData.length);
+  }
 
-    const convertBreedToIngredient = inputArrayData.map((DB) => {
-      DB = outputArrayData[Math.floor(Math.random() * outputArrayData.length)];
-      return DB;
-    });
-    
+  const convertBreedToIngredient = inputArrayData.map((DB) => {
+    DB =
+      outputArrayData[Math.floor(Math.random() * outputArrayData.length)]
+        .ingredientName;
+    return DB;
+  });
+
   useEffect(() => {
-
+    // if (breedsToDrinkIngredientsArray.length === 1) {
+    //   setBreedsToDrinkIngredientsArray(
+    //     outputArrayData.map((OAD) => {
+    //       return OAD.containsAlcohol === "Yes";
+    //     })
+    //   );
+    // }
     setBreedsToDrinkIngredientsArray(
       convertedInputToOutputItems.map((BMA) => {
         BMA.liquor =
@@ -51,15 +68,19 @@ function Cocktail(props) {
     // console.log(convertedInputToOutputItems);
     setBreedsToDrinkIngredientsArray([...convertedInputToOutputItems]);
   };
-  
+
   return (
     <div>
       <div className="custom-drink-container">
-        <h2>Your Custom {(props.selectOutputDataCategory==="Cocktail") ?
-          ('Cocktail')
-          : ('Smoothie')}:</h2>
+        <h2>
+          Your Custom{" "}
+          {props.selectOutputDataCategory === "Cocktail"
+            ? "Cocktail"
+            : "Smoothie"}
+          :
+        </h2>
         {breedsToDrinkIngredientsArray.length > 0 ? (
-          <Card className="cocktail-card" >
+          <Card className="cocktail-card">
             <Card.Body>
               {breedsToDrinkIngredientsArray.map((AITFNAR, i) => {
                 // console.log(breedsToDrinkIngredientsArray)
@@ -73,8 +94,11 @@ function Cocktail(props) {
                       <Card.Text key={"listItem" + 1}>
                         {AITFNAR.liquor} - {AITFNAR.percentage}%
                       </Card.Text>
-                      <Button className="simple-icon-button" onClick={() => replaceCocktailItem(AITFNAR, i)}>
-                      &#8635;
+                      <Button
+                        className="simple-icon-button"
+                        onClick={() => replaceCocktailItem(AITFNAR, i)}
+                      >
+                        &#8635;
                       </Button>
                     </ListGroup.Item>
                   </ListGroup>

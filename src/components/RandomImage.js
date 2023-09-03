@@ -1,4 +1,5 @@
 import React from 'react'
+import API from "../utils/API";
 import { useEffect, useInsertionEffect, useState } from "react";
 import myDogs from "../assets/mydogs.jpg";
 
@@ -9,8 +10,20 @@ function RandomImage(props) {
         image: myDogs,
       });
 
+      // useEffect(() => {
+      //   // console.log(props.userId.id);
+      //   API.getRandomDog().then((data) => {
+      //     console.log(data);
+      //     setRandomDogImage(data);
+      //   });
+      // }, []);
+
       const changeRandomDogImage = () => {
-        setRandomDogImage(inputArrayData[Math.floor(Math.random() * inputArrayData.length)]);
+        // setRandomDogImage(inputArrayData[Math.floor(Math.random() * inputArrayData.length)]);
+        API.getRandomDog().then((data) => {
+          console.log(data);
+          setRandomDogImage(data);
+        });
       };
   return (
     <div className="randomImgContainer">

@@ -15,12 +15,13 @@ function Cocktail(props) {
     useState(convertedInputToOutputItems);
   // console.log(convertedInputToOutputItems)
   // console.log(breedsToDrinkIngredientsArray)
-  if (breedsToDrinkIngredientsArray.length === 1) {
+  // console.log(outputArrayData)
+  if (breedsToDrinkIngredientsArray.length === 1 && outputArrayData[0].ingredientName.includes("Light rum")) {
     outputArrayData = outputArrayData.filter(
       (OAD) => OAD.containsAlcohol === "Yes"
     );
-    console.log(outputArrayData.length);
-  } else {
+    // console.log(outputArrayData.length);
+  } else if (breedsToDrinkIngredientsArray.length === 2 && outputArrayData[0].ingredientName.includes("Light rum")) {
     console.log(outputArrayData.length);
   }
 

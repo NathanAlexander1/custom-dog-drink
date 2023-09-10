@@ -3,8 +3,9 @@ import { useEffect, useState, useRef } from "react";
 import { Button } from "react-bootstrap";
 
 function UploadWidget(props) {
-    console.log(props.sendImgFromChild)
+    // console.log(props.sendImgFromChild)
     let newImg;
+    const [uploadImage, setUploadImage] = useState("")
   const cloudinaryRef = useRef();
   const widgetRef = useRef();
   useEffect(() => {
@@ -17,14 +18,18 @@ function UploadWidget(props) {
         uploadPreset: "jbtfo1hi",
       },
       function (error, result) {
-        console.log(result.info.path);
-        newImg = result.info.path
-        props.sendImgFromChild(newImg)
+        if (!error && result && result.event === "success") {
+            // console.log(result.info.secure_url);
+            newImg = result.info.secure_url
+            setUploadImage(result.info.secure_url)
+            
+        }
       }
     );
     console.log(widgetRef.current);
   }, []);
-
+  props.sendImgFromChild(uploadImage)
+console.log(uploadImage)
   // const showWidget = () => {
 
   //     let widget = window.cloudinary.createUploadWidget({

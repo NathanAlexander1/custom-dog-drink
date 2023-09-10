@@ -12,8 +12,9 @@ function PublicDogs() {
     });
   }, []);
   return (
-    <div class="d-flex flex-row">
+    <div className="d-flex flex-row">
       {dogUploadList.map((dul, i) => {
+        console.log(dul)
         return (
           <div>
             <ul>

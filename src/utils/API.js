@@ -96,6 +96,18 @@ const API = {
       },
     }).then((res) => res.json());
   },
+
+  //Upload new dog
+  uploadNewDog: (dogUploadObj, token) => {
+    return fetch(`${URL_PREFIX}/api/dogs/`, {
+      method: "POST",
+      body: JSON.stringify(dogUploadObj),
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+    }).then((res) => res.json());
+  }
 };
 
 export default API;

@@ -27,14 +27,14 @@ function UserUploads(props) {
   //   })
   const navigate = useNavigate();
   useEffect(() => {
-    console.log(props);
+    // console.log(props);
     API.getUserDogUploads(props.token, props.userId.id).then((data) => {
       //   console.log(data);
       setUserDogUploadList(data);
     });
   }, [props.userId.id]);
 
-  //   console.log(dogGuessData);
+//   console.log(dogGuessData);
 
   const sendImgFromChild = (image) => {
     setNewDogImage(image);
@@ -124,7 +124,9 @@ function UserUploads(props) {
       {showGuesses ? (
         <Guesses dogGuessData={dogGuessData} />
       ) : (
-        console.log("No guesses requested")
+        <div className="hidden">
+            No Content
+        </div>
       )}
     </div>
   );

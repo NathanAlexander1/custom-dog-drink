@@ -9,7 +9,7 @@ import UploadWidget from "../UploadWidget";
 import { Button, Modal } from "react-bootstrap";
 
 function UserUploads(props) {
-//   console.log(props);
+  //   console.log(props);
 
   const [userDogUploadList, setUserDogUploadList] = useState([]);
   const [dogGuessData, setDogGuessData] = useState([]);
@@ -38,7 +38,7 @@ function UserUploads(props) {
 
   const sendImgFromChild = (image) => {
     setNewDogImage(image);
-    console.log(newDogImage)
+    console.log(newDogImage);
   };
 
   const handleRenderGuesses = (guesses) => {
@@ -52,7 +52,6 @@ function UserUploads(props) {
   };
 
   const handleNewDogUploadForm = (e) => {
-
     e.preventDefault();
     const newDog = {
       name: newDogName,
@@ -61,7 +60,7 @@ function UserUploads(props) {
       UserId: props.userId.id,
     };
 
-    console.log(newDog)
+    console.log(newDog);
     setNewDogName("");
     setNewDogImage("");
     setNewDogPrivate(false);
@@ -72,7 +71,7 @@ function UserUploads(props) {
         setUserDogUploadList(data);
       });
     });
-    setRenderUploadForm(false)
+    setRenderUploadForm(false);
   };
   return (
     <div>
@@ -86,18 +85,17 @@ function UserUploads(props) {
           <div>
             <Form onSubmit={handleNewDogUploadForm}>
               <Form.Control
+                required
                 placeholder="Dog Name"
                 onChange={(e) => setNewDogName(e.target.value)}
               />
               <UploadWidget sendImgFromChild={sendImgFromChild} />
-              <Form.Check id="isPrivateCheckbox" type="checkbox" label="Make dog private?"  onChange={(e) => setNewDogPrivate(e.target.checked)}/>
-              {/* <Form.Check
+              <Form.Check
+                id="isPrivateCheckbox"
+                type="checkbox"
                 label="Make dog private?"
-                feedback="Make dog private?"
-                feedbackType="invalid"
-                value="true"
-                onChange={(e) => setNewDogPrivate(e.target.value)}
-              /> */}
+                onChange={(e) => setNewDogPrivate(e.target.checked)}
+              />
               <Button className="center-btn" type="submit" variant="primary">
                 Upload
               </Button>{" "}

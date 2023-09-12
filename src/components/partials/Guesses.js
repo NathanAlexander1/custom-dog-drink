@@ -1,20 +1,29 @@
-import React from 'react'
+import React from "react";
+import { Button, Card } from "react-bootstrap";
 
 function Guesses(props) {
-  // console.log(props.dogGuessData.DogGuesses)
+  console.log(props);
   return (
-    <div className="d-flex m-3">
+    <div className="dog_guesses">
       {props.dogGuessData.DogGuesses.map((dg, i) => {
         return (
-          <div className="p-2">
-            <h4>Guesser: {dg.User.name}</h4>
-            <h4>Breed: {dg.breed}</h4>
-            <h4>Percentage: {dg.percentage}</h4>
+          <div>
+            <Card style={{ width: "18rem" }} className="ind_public_dog">
+              <Card.Body>
+                <Card.Title>Guesser: {dg.User.name}</Card.Title>
+                <Card.Title>Breed: {dg.breed}</Card.Title>
+                <Card.Title>Percentage: {dg.percentage}</Card.Title>
+                {/* <Card.Text>
+            Some quick example text to build on the card title and make up
+            the bulk of the card's content.
+          </Card.Text> */}
+              </Card.Body>
+            </Card>
           </div>
-        )
+        );
       })}
     </div>
-  )
+  );
 }
 
-export default Guesses
+export default Guesses;

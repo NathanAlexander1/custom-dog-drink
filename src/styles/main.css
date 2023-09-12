@@ -149,6 +149,29 @@
     /* opacity: 1; */
 }
 
+/* Public Dogs Page Styles */
+.public_dogs_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+}
+
+.ind_public_dog {
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    .public-dog-btn {
+        margin: 5px;
+    }
+}
+
+/* Dog Guess styles */
+.dog_guesses {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
 @media screen and (max-width: 700px) {
     .setInputOutputFormContainer {
         flex-direction: column;

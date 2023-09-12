@@ -60,6 +60,16 @@ const API = {
   getRandomDog: () => {
     return fetch(`${URL_PREFIX}/api/dogbreeds/randomdogbreed`).then((res) => res.json());
   },
+  //get Dog Uploads by User Id
+  getUserDogUploads: (token, userId) => {
+    return fetch(`${URL_PREFIX}/api/dogs/users/${userId}`, {
+      method: "GET",
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
+    }).then((res) => res.json());
+  },
   //dog guesses by user id
   getDogGuessesByUserID: (token, userId) => {
     return fetch(`${URL_PREFIX}/api/dogguesses/users/${userId}`, {
@@ -71,9 +81,9 @@ const API = {
     }).then((res) => res.json());
   },
 
-  //get dog guesses by id
-  getDogID: (DogId) => {
-    return fetch(`${URL_PREFIX}/api/dogguesses/${DogId}`).then((res) => res.json());
+  //get dog guesses by dog id
+  getAllGuessesOnADog: (DogId) => {
+    return fetch(`${URL_PREFIX}/api/dogguesses/dogs/${DogId}`).then((res) => res.json());
   },
   //might not need
   containsAlcohol: (name) => {
@@ -86,6 +96,18 @@ const API = {
       },
     }).then((res) => res.json());
   },
+
+  //Upload new dog
+  uploadNewDog: (dogUploadObj, token) => {
+    return fetch(`${URL_PREFIX}/api/dogs/`, {
+      method: "POST",
+      body: JSON.stringify(dogUploadObj),
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+    }).then((res) => res.json());
+  }
 };
 
 export default API;

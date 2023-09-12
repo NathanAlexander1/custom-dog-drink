@@ -4,6 +4,8 @@ import Navbar from "./components/Navbar";
 import Login from "./components/pages/Login";
 import Landing from "./components/pages/Landing";
 import DogGuesses from "./components/pages/DogGuesses";
+import UserUploads from "./components/pages/UserUploads";
+import GuessesOnUserDog from "./components/modals/GuessesOnUserDog";
 import PublicDogs from "./components/pages/PublicDogs";
 import Breeds from "./components/Breeds";
 import Cocktail from "./components/Cocktail";
@@ -207,8 +209,18 @@ function App() {
             path="/dogguesses"
             element={<DogGuesses userId={userId} token={token} />}
           />
-          <Route path="/public"
-            element={<PublicDogs userId={userId} token={token} />}/>
+          <Route
+            path="/uploads"
+            element={<UserUploads userId={userId} token={token} />}
+          />
+          {/* <Route
+            path="/guessesonspecificdogs"
+            element={<GuessesOnUserDog userId={userId} token={token} />}
+          /> */}
+          <Route
+            path="/public"
+            element={<PublicDogs userId={userId} token={token} />}
+          />
         </Routes>
       </Router>
     </div>

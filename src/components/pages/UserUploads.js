@@ -80,7 +80,7 @@ function UserUploads(props) {
         {/* <UploadWidget/> */}
 
         {!renderUploadForm ? (
-          <button onClick={() => handleRenderUploadForm()}>New Upload</button>
+          <Button onClick={() => handleRenderUploadForm()}>New Upload</Button>
         ) : (
           <div>
             <Form onSubmit={handleNewDogUploadForm}>
@@ -110,13 +110,13 @@ function UserUploads(props) {
             <div>
               <img src={udul.dog_image} width="100px" />
               <h4>{udul.name}</h4>
-              <button
+              <Button
                 onClick={() => handleRenderGuesses(udul)}
                 variant="primary"
                 size="md"
               >
                 View Guesses
-              </button>
+              </Button>
             </div>
           );
         })}

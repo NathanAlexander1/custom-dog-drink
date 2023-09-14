@@ -82,9 +82,9 @@ const API = {
   },
 
   //get dog guesses by dog id
-  getAllGuessesOnADog: (DogId) => {
-    return fetch(`${URL_PREFIX}/api/dogguesses/dogs/${DogId}`).then((res) => res.json());
-  },
+  // getAllGuessesOnADog: (DogId) => {
+  //   return fetch(`${URL_PREFIX}/api/dogguesses/dogs/${DogId}`).then((res) => res.json());
+  // },
   //might not need
   containsAlcohol: (name) => {
     return fetch(`https://the-cocktail-db.p.rapidapi.com/search.php?i=${name}`, {

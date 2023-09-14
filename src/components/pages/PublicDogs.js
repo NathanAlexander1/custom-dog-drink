@@ -28,6 +28,7 @@ function PublicDogs() {
     setDogGuessData(dogGuessData);
     setRenderGuesses(true);
   };
+  console.log(dogUploadList)
   return (
     <div>
       {renderGuesses ? (

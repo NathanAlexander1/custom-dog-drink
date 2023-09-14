@@ -71,8 +71,8 @@ const API = {
     }).then((res) => res.json());
   },
   //dog guesses by user id
-  getDogGuessesByUserID: (token, userId) => {
-    return fetch(`${URL_PREFIX}/api/dogguesses/users/${userId}`, {
+  getFullDogByUserID: (token, userId) => {
+    return fetch(`${URL_PREFIX}/api/fullguess/users/${userId}`, {
       method: "GET",
       headers: {
         Authorization: `Bearer ${token}`,

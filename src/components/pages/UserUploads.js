@@ -29,7 +29,7 @@ function UserUploads(props) {
   useEffect(() => {
     // console.log(props);
     API.getUserDogUploads(props.token, props.userId.id).then((data) => {
-      //   console.log(data);
+        console.log(data);
       setUserDogUploadList(data);
     });
   }, [props.userId.id]);

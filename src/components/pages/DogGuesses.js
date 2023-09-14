@@ -1,5 +1,7 @@
 import React from 'react'
 import { useEffect, useInsertionEffect, useState } from "react";
+import { Button, Card } from "react-bootstrap";
+
 import API from '../../utils/API'
 
 function DogGuesses(props) {
@@ -7,23 +9,29 @@ function DogGuesses(props) {
     const [dogGuessName, setdogGuessName] = useState([]);
     useEffect(() => {
         // console.log(props.userId.id);
-        API.getDogGuessesByUserID(props.token, props.userId.id).then((data) => {
+        API.getFullDogByUserID(props.token, props.userId.id).then((data) => {
           console.log(data);
           setdogGuessList(data);
         });
       }, [props.userId]);
+      console.log(dogGuessList)
   return (
     <div>
         {dogGuessList.map((dgl, i) => {
+          // console.log(dgl)
             return (
-                <ul>
-                    <li>{dgl.Dog.name}</li>
-                    <li>guess id: {dgl.id}</li>
-                    <li>Guess breed: {dgl.breed}</li>
-                    <li>Guess percentage: {dgl.percentage}</li>
-                    <li>Guesser id: {dgl.UserId}</li>
-                    <li>Id of dog being guessed: {dgl.DogId}</li>
-                </ul>
+              
+              <Card style={{ width: "18rem" }} className="ind_public_dog">
+              <Card.Body>
+                <Card.Title>{dgl.dogName}</Card.Title>
+                <Card.Title>Guess:</Card.Title>
+                {dgl.DogGuesses.map((dg, i) => {
+                  return(
+                    <Card.Text>{dg.breed} - {dg.percentage}%</Card.Text>
+                    )
+                })}
+              </Card.Body>
+            </Card>
             )
         })}
     </div>
